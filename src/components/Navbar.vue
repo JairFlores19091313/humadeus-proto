@@ -11,15 +11,15 @@
                                 <span class="py-2 px-3">Inicio de sesión</span>
                             </div>
                         </a>
-                        <div class="flex justify-center items-center gap-6">
-                            <img src="../pages/images/iconos-facebook-humadeus.png" alt="" class="w-6 h-6">
-                            <img src="../pages/images/iconos-x-humadeus.png" alt="" class="w-6 h-6">
-                            <img src="../pages/images/iconos-linkedin-sociales-humadeus.png" alt="" class="w-6 h-6">
+                        <div class="flex justify-center items-center lg:gap-6 gap-4">
+                            <img src="../pages/images/iconos-facebook-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4">
+                            <img src="../pages/images/iconos-x-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4">
+                            <img src="../pages/images/iconos-linkedin-sociales-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4">
                         </div>
                     </div>
-                    <div class="flex justify-between relative items-center lg:space-x-8 space-x-5">
+                    <div class="flex justify-between relative items-center lg:space-x-8">
                         <!-- nosotros -->
-                        <div class="relative flex justify-between">
+                        <div class="relative items-center flex justify-between">
                             <router-link to="/nosotros">
                                 <button class="custom-ring inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none  ">Nosotros
                                 </button>
@@ -72,11 +72,13 @@ export default {
     content: "";
     position: absolute;
     bottom: -2px; /* Ubica el anillo debajo del botón */
-    left: 10%; /* Ajusta para centrar el anillo */
+    left: 50%; /* Posición inicial centrada */
+    transform: translateX(-50%); /* Ajusta para centrar el pseudo-elemento */
     width: 70%; /* Define el 80% del ancho del botón */
     height: 1.5px; /* Grosor del anillo */
     background-color: #a0a59a; /* Color del anillo */
     border-radius: 1px; /* Esquinas suaves del anillo */
     transition: all 0.5s ease-in-out; /* Animación suave */
+
   }
 </style>
