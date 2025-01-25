@@ -9,7 +9,6 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: normal;
   src:  local('Montserrat'),
         url('./assets/Montserrat.woff2') format('woff2');
   font-display: swap;
@@ -76,7 +75,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #fff;
-  color: #797979;
+  color: #444343;
 }
 /* Clase para ocultar h1 en el home: Utilizada para ocultar texto visualmente pero mantenerlo accesible para lectores de pantalla */
   .sr-only {

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory,  type RouteRecordRaw } from 'vue-router';
 //import mainRoutes from './router/mainRoutes.ts';
 //import { getAuth } from 'firebase/auth';
 declare module 'vue-router' {
@@ -14,25 +14,25 @@ const routes: RouteRecordRaw[] = [
             //requireAuth: false
         },
     },
-    { path: '/nosotros', component: () => import('./pages/NosotrosPage.vue'), name: 'Humadeus Home',
+    { path: '/nosotros', component: () => import('./pages/NosotrosPage.vue'), name: 'Nosotros',
         meta: {
             title: "Nosotros | Humadeus",
             //requireAuth: false
         },
     },
-    { path: '/soluciones', component: () => import('./pages/SolucionesPage.vue'), name: 'Humadeus Home',
+    { path: '/soluciones', component: () => import('./pages/SolucionesPage.vue'), name: 'Soluciones',
         meta: {
             title: "Soluciones | Humadeus",
             //requireAuth: false
         },
     },
-    { path: '/contactanos', component: () => import('./pages/ContactoPage.vue'), name: 'Humadeus Home',
+    { path: '/contactanos', component: () => import('./pages/ContactoPage.vue'), name: 'Contactanos',
         meta: {
             title: "Contactanos | Humadeus",
             //requireAuth: false
         },
     },
-    { path: '/solicita-tu-credito', component: () => import('./pages/SolCredPage.vue'), name: 'Humadeus Home',
+    { path: '/solicita-tu-credito', component: () => import('./pages/SolCredPage.vue'), name: 'Solicita tu credito',
         meta: {
             title: "Solicita tu crédito | Humadeus",
             //requireAuth: false

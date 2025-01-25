@@ -7,7 +7,7 @@
                     <div class="flex justify-between items-center mb-4 w-full">
                         <img src="../pages/images/El-futuro-en-tus-manos.png" class="w-[307px] h-[20px]">
                         <a href="https://humanitas.edu.mx/usuarios" target="_blank" class="">
-                            <div class="flex items-center justify-center hover:bg-hcream hover:text-hgreen  bg-hgreen border border-hcream text-hcream text-lg transition duration-300 ease-in-out">
+                            <div class="flex items-center justify-center hover:bg-white hover:text-hgreen font-normal bg-hgreen border border-white text-white text-lg transition duration-300 ease-in-out">
                                 <span class="py-2 px-3">Inicio de sesión</span>
                             </div>
                         </a>

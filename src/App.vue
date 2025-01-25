@@ -1,33 +1,24 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
     Navbar,
     Footer,
   },
 });
 </script>
 
-<template>
-    <div class="no-scroll">
+<template class="flex flex-col w-full bg-white">
+    <div class="flex flex-col h-full no-scroll justify-center items-center w-full bg-white">
         <Navbar/>
-        <div>
-            <a href="https://vite.dev" target="_blank">
-            <img src="./assets/vite.svg" class="logo" alt="Vite logo" />
-            </a>
-            <a href="https://vuejs.org/" target="_blank">
-            <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-            </a>
-            <p class=" font-serif uppercase">QUE HONGO</p>
-        </div>
-        <HelloWorld msg="Vite + Vue" class="w-screen" />
-        <Footer />
+        <main>
+            <router-view />
+        </main>
+        <Footer/>
     </div>
 </template>
 
