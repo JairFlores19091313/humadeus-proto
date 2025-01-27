@@ -26,7 +26,7 @@ export default {
 				'hgold': '#CAAB55',
 				'hwine': '#881912',
 				'hgray': '#797979',
-				'hgreen': '#424B35',
+				'hgreen': '#515e3a',
 				'hcream': '#E9CAB0',
             },
             typography: {
