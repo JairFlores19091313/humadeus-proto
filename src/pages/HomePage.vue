@@ -4,7 +4,7 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Simula</span> tu Crédito</h2>
                 <div class="flex w-full justify-start  max-w-[1200px]">
-                    <div class="max-w-[1200px] mx-auto w-full bg-hgreen/10 p-8 rounded-none">
+                    <div class="max-w-[1200px] mx-auto w-full bg-[#e1e2e0] p-8 rounded-none">
                         <div class="flex justify-between w-full">
                         <!-- Sección de simulador -->
                         <div class="mr-8 w-full">
@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <p class=" mt-8 text-left">2. ¿En qué plazo deseas liquidar tu crédito? (meses).</p>
-                            <div class="flex justify-between items-center mt-3">
+                            <div class="flex md:gap-8 gap-6 items-center mt-3">
                                 <button
                                     v-for="term in terms"
                                     :key="term"
@@ -29,9 +29,6 @@
                                     ]"
                                 >
                                     {{ term }}
-                                </button>
-                                <button @click="calculate" class=" bg-hgreen flex items-center justify-center text-white hover:bg-white font-serif hover:text-hgreen rounded-none px-6 w-[100px] py-1">
-                                    Calcular
                                 </button>
                             </div>
                             <p class=" mt-8 text-left">¡Para un resultado más preciso comunícate
@@ -145,7 +142,7 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Pasos</span> para solicitar un Crédito Humadeus</h2>
                 <div class="flex w-full justify-start max-w-[1200px] text-left gap-8">
-                    <div class="bg-hgreen flex flex-col content-between justify-between w-full">
+                    <div class="bg-[#515e3a] flex flex-col content-between justify-between w-full">
                         <p class="text-white p-6 text-4xl mb-16 mt-2">1.</p>
                         <p class="text-white p-6">Debes estar <span class="font-bold">inscrito</span> a tu plan de estudios deseado.</p>
                     </div>
@@ -169,7 +166,7 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Requisitos</span> para solicitar un Crédito</h2>
             </div>
-            <div class="flex flex-col bg-hgreen/10 justify-start items-center  w-screen">
+            <div class="flex flex-col bg-[#e1e2e0] justify-start items-center  w-screen">
                 <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                     <div class="flex justify-between items-center w-full py-8">
                         <!-- Texto -->
@@ -197,29 +194,29 @@
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Beneficios</span> de un Crédito Humadeus</h2>
                 <div class="flex w-full justify-start max-w-[1200px] text-center gap-10">
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-01.png" class="p-4 pt-8">
-                        <p class="font-bold text-lg p-4">Financiamiento flexible</p>
-                        <p class="p-4 ">Te ofrecemos un plan económico accesible y personalizado.</p>
+                        <img src="./images/iconos-beneficios-humadeus-01.png" class=" mt-8 w-[126px] h-[126px]">
+                        <p class="font-bold text-lg p-2">Financiamiento flexible</p>
+                        <p class="px-4 py-2">Te ofrecemos un plan económico accesible y personalizado.</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-02.png" class="p-4 pt-8">
-                        <p class="font-bold text-lg p-4">Apoyo<br> constante</p>
-                        <p class="p-4">Acompañamiento en cada estado del proceso.</p>
+                        <img src="./images/iconos-beneficios-humadeus-02.png" class=" mt-8 w-[126px] h-[126px]">
+                        <p class="font-bold text-lg p-2">Apoyo<br> constante</p>
+                        <p class="px-4 py-2">Acompañamiento en cada estado del proceso.</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-03.png" class="p-4 pt-8">
-                        <p class="font-bold text-lg p-4">Mentorias personalizadas</p>
-                        <p class="p-4">Recibe orientación de profesionales experimentados.</p>
+                        <img src="./images/iconos-beneficios-humadeus-03.png" class=" mt-8 w-[126px] h-[126px]">
+                        <p class="font-bold text-lg p-2">Mentorias personalizadas</p>
+                        <p class="px-4 py-2">Recibe orientación de profesionales experimentados.</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-04.png" class="p-4 pt-8">
-                        <p class="font-bold text-lg p-4">Periodo de<br> gracia</p>
-                        <p class="p-4">Cuentas con 6 meses después de tu graduación para el retorno de tu crédito.</p>
+                        <img src="./images/iconos-beneficios-humadeus-04.png" class=" mt-8 w-[126px] h-[126px]">
+                        <p class="font-bold text-lg p-2">Periodo de<br> gracia</p>
+                        <p class="px-4 py-2">Cuentas con 6 meses después de tu graduación para el retorno de tu crédito.</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-05.png" class="p-4 pt-8">
-                        <p class="font-bold text-lg p-4">Protección contra desempleo</p>
-                        <p class="p-4">6 meses adicionales para el retorno de tu crédito en caso de desempleo.</p>
+                        <img src="./images/iconos-beneficios-humadeus-05.png" class=" mt-8 w-[126px] h-[126px]">
+                        <p class="font-bold text-lg px-4 py-2">Protección contra desempleo</p>
+                        <p class="px-4 py-2">6 meses adicionales para el retorno de tu crédito en caso de desempleo.</p>
                     </div>
                 </div>
             </div>
@@ -229,7 +226,7 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Voces</span> de nuestros estudiantes</h2>
             </div>
-            <div class="flex flex-col bg-hgreen/10 justify-start items-center  w-screen">
+            <div class="flex flex-col bg-hfondogreen justify-start items-center  w-screen">
                 <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                     <div class="mt-6 flex justify-center">
                         <div class="bg-white p-10 py-20 mb-2 max-w-4xl shadow">
@@ -254,22 +251,22 @@
 
         <div class="flex items-center w-full max-w-[1200px] mb-16">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Beneficios</span> de un Crédito Humadeus</h2>
+                <h2 class=" font-serif text-2xl text-hgreen text-left mb-4">Te puede interesar:</h2>
                 <div class="flex w-full justify-start max-w-[1200px] text-center gap-10">
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full cursor-pointer" >
-                        <img src="https://picsum.photos/200" class="w-full">
+                        <img src="https://humanitas.edu.mx/blog/wp-content/uploads/2024/06/tipos-contabilidad-financiero.webp" class="w-full">
                         <p class="font-semibold text-lg leading-tight text-gray-500 p-4">Cómo ahorrar un poco de presupuesto.</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full cursor-pointer">
-                        <img src="https://picsum.photos/200" class="w-full">
+                        <img src="https://humanitas.edu.mx/blog/wp-content/uploads/2024/10/cuanto-cuesta-mensualidad-univer.webp" class="w-full">
                         <p class="font-semibold text-lg leading-tight text-gray-500 p-4">Cómo incrementar mis ingresos.</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full cursor-pointer">
-                        <img src="https://picsum.photos/200" class="w-full">
+                        <img src="https://humanitas.edu.mx/blog/wp-content/uploads/2024/10/clasificacion-contabilidad-anali.webp" class="w-full">
                         <p class="font-semibold text-lg leading-tight text-gray-500 p-4">Plan finacieron de estudios</p>
                     </div>
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full cursor-pointer">
-                        <img src="https://picsum.photos/200" class="w-full">
+                        <img src="https://humanitas.edu.mx/blog/wp-content/uploads/2024/10/ejemplo-contabilidad-administrat.webp" class="w-full">
                         <p class="font-semibold text-lg leading-tight text-gray-500 p-4">Ventajas de los créditos educativos.</p>
                     </div>
                 </div>

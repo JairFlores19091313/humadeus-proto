@@ -12,9 +12,9 @@
                             </div>
                         </a>
                         <div class="flex justify-center items-center lg:gap-6 gap-4">
-                            <img src="../pages/images/iconos-facebook-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4">
-                            <img src="../pages/images/iconos-x-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4">
-                            <img src="../pages/images/iconos-linkedin-sociales-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4">
+                            <a href="https://www.facebook.com/universidadhumanitas/" target="_blank"><img src="../pages/images/iconos-facebook-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4"></a>
+                            <a href="https://twitter.com/UHumanitas" target="_blank"><img src="../pages/images/iconos-x-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4"></a>
+                            <a href="https://www.linkedin.com/school/universidad-humanitas/mycompany/" target="_blank"><img src="../pages/images/iconos-linkedin-sociales-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4"></a>
                         </div>
                     </div>
                     <div class="flex justify-between relative items-center lg:space-x-8">
@@ -26,14 +26,19 @@
                             </router-link>
                         </div>
                         <!-- Soluciones -->
-                        <div class="relative flex justify-between">
+                        <div class="relative flex justify-between custom-ring" @mouseover="openDropdown" @mouseleave="startCloseTimer">
                             <router-link to="/soluciones">
-                                <button class="custom-ring inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Soluciones
+                                <button  class=" inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Soluciones
                                     <svg class="-mr-1 ml-2 h-6 w-6 text-hcream" xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 12z" clip-rule="evenodd" />
                                     </svg>
                                 </button>
                             </router-link>
+                            <div v-if="isOpen" class="absolute top-10 lg:w-52 w-[44] italic rounded-none text-black border-hcream shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu" @mouseover="cancelCloseTimer" @mouseleave="closeDropdown">
+                                <router-link to="/soluciones/creditos-universitarios" class="dropdown-item block  border border-x-hcream border-t-hcream border-b-transparent font-normal px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen" role="menuitem">Créditos universitarios</router-link>
+                                <router-link to="/soluciones/gastos-academicos" class="dropdown-item block font-normal border border-x-hcream border-t-hcream border-b-transparent px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen" role="menuitem">Gastos académicos</router-link>
+                                <router-link to="/soluciones/programas-de-intercambio" class="dropdown-item block font-normal border border-x-hcream border-t-hcream border-b-transparent px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen" role="menuitem">Programas de intercambio</router-link>
+                            </div>
                         </div>
                         <!-- Contactanos -->
                         <div class="relative flex justify-between">
@@ -59,14 +64,36 @@
 
 <script lang="ts">
 export default {
-
+    data() {
+        return {
+            isOpen: false,
+            closeTimer: 0,
+        };
+    },
+    methods: {
+        openDropdown() {
+            clearTimeout(this.closeTimer); // Limpiar el temporizador si está activo
+            this.isOpen = true;
+        },
+        closeDropdown() {
+            this.isOpen = false;
+        },
+        startCloseTimer() {
+            this.closeTimer = setTimeout(() => {
+                this.closeDropdown();
+            }, 120); // Espera 200ms antes de cerrar el menú
+        },
+        cancelCloseTimer() {
+        clearTimeout(this.closeTimer); // Limpiar el temporizador si el usuario vuelve al menú antes de que se cierre
+        }
+    }
 }
 </script>
 
 <style scoped>
-  .custom-ring {
-    position: relative;
-  }
+    .custom-ring {
+        position: relative;
+    }
 
   .custom-ring:hover::after {
     content: "";
@@ -81,4 +108,11 @@ export default {
     transition: all 0.5s ease-in-out; /* Animación suave */
 
   }
+    .dropdown-item {
+        color: black;
+    }
+    .dropdown-item:hover {
+        background-color: #424b35;
+        color: white;
+    }
 </style>
