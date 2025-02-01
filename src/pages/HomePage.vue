@@ -79,15 +79,15 @@
                         <form autocomplete="off">
                             <div class="mx-2">
                                 <div class="user-box">
-                                    <input v-model="nombre" type="text" id="name" name="nombre" required maxlength="30" class="">
+                                    <input  type="text" id="name" name="nombre" required maxlength="30" class="">
                                     <label for="nombre" class=" italic">Nombre*</label>
                                 </div>
                                 <div class="user-box">
-                                    <input v-model="apellidos" type="text" id="apelidos" name="apellidos" required maxlength="55" class="">
+                                    <input  type="text" id="apelidos" name="apellidos" required maxlength="55" class="">
                                     <label for="apellidos" class=" italic">Apellidos*</label>
                                 </div>
                                 <div class="user-box">
-                                    <input v-model="email" type="text" id="email" name="email" @change="handleEmailChange" required class="">
+                                    <input type="text" id="email" name="email" required class="">
                                     <label for="email" class=" italic">E-mail*</label>
                                 </div>
                                 <div class="user-box">
@@ -101,7 +101,7 @@
 
                                         </div>
                                         <div class="w-2/3">
-                                            <input v-model="telefono" id="telefono" type="tel" name="telefono" required maxlength="10" class="focus:ring-0">
+                                            <input  id="telefono" type="tel" name="telefono" required maxlength="10" class="focus:ring-0">
                                             <label for="telefono" class=" italic" style="top: -25px;left: 0;color: #424b35;font-size: 12px">N&uacute;mero de teléfono*</label>
                                         </div>
                                     </div>
@@ -124,7 +124,7 @@
                                 </div> -->
                                 <div class="flex">
                                     <div class="flex justify-center items-center mb-6"> 
-                                        <label class="text-hgreen text-[11px] flex items-center justify-center"><input type="checkbox" v-model="conditions" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                                        <label class="text-hgreen text-[11px] flex items-center justify-center"><input type="checkbox"  class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
                                         He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-htwo">Aviso de privacidad</a>.
                                         </label>
                                     </div>

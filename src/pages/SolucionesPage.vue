@@ -2,7 +2,7 @@
     <div class="flex flex-col justify-center items-center w-full">
         <div class="flex flex-col items-center w-full mb-16 mt-[180px]">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                <h2 class=" font-serif text-2xl text-hgreen text-left mb-4">Nuestros <span class="font-bold">Productos Financieros</span></h2>
+                <h1 class=" font-serif text-2xl text-hgreen text-left mb-4">Nuestros <span class="font-bold">Productos Financieros</span></h1>
             </div>
             <div class="flex flex-col bg-[#e1e2e0] justify-start items-center  w-screen">
                 <div class="flex flex-col max-w-[1200px] justify-start  w-full">
@@ -126,7 +126,7 @@
         </div>
         <div class="flex flex-col border border-hgreen max-w-[1200px] w-full mb-16">
             <div class="mx-auto md:p-12 p-4 w-full">
-                <h2 class="text-lg font-bold text-left text-gray-800">¿Tienes alguna <span class="font-extrabold">pregunta?</span></h2>
+                <h2 class="text-lg text-left text-hgreen">¿Tienes alguna <span class="font-bold">pregunta?</span></h2>
                 <p class="text-gray-600 text-left text mb-6">
                 Te brindamos asesoría personalizada para que tomes la<br> decisión que mejor se adapte a tus necesidades.
                 </p>
@@ -152,7 +152,7 @@
                         <div class="relative border-b border-gray-400">
                         <input
                             type="tel"
-                            
+                    
                             placeholder="Teléfono"
                             class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
                         />
@@ -167,7 +167,7 @@
                         class="md:w-[350px] w-full bg-transparent focus:outline-none py-2 text-gray-700 border-b border-gray-400"
                         />
                         <div class="flex items-center space-x-2">
-                            <label class="text-hgreen items-center justify-center"><input type="checkbox" v-model="conditions" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                            <label class="text-hgreen items-center justify-center"><input type="checkbox" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
                             He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> Aviso de privacidad</a>.
                             </label>
                         </div>
@@ -183,14 +183,18 @@
     </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
 
-}
+export default defineComponent({
+    data() {
+        return {
+            conditions: false,
+        }
+    },
+});
 </script>
 
 <style scoped>
-input::placeholder {
-    color: #666;
-}
+
 </style>
