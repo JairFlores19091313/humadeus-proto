@@ -35,9 +35,9 @@
                                 </button>
                             </router-link>
                             <div v-if="isOpen" class="absolute top-10 lg:w-52 w-[44] italic rounded-none text-black border-hcream shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu" @mouseover="cancelCloseTimer" @mouseleave="closeDropdown">
-                                <router-link to="/soluciones/creditos-universitarios" class="dropdown-item block  border border-x-hcream border-t-hcream border-b-transparent font-normal px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen" role="menuitem">Créditos universitarios</router-link>
-                                <router-link to="/soluciones/gastos-academicos" class="dropdown-item block font-normal border border-x-hcream border-t-hcream border-b-transparent px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen" role="menuitem">Gastos académicos</router-link>
-                                <router-link to="/soluciones/programas-de-intercambio" class="dropdown-item block font-normal border border-x-hcream border-t-hcream border-b-transparent px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen" role="menuitem">Programas de intercambio</router-link>
+                                <router-link to="/soluciones/creditos-universitarios" class="dropdown-item block  border border-x-hcream border-t-hcream border-b-transparent font-normal px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen/60" role="menuitem">Créditos universitarios</router-link>
+                                <router-link to="/soluciones/gastos-academicos" class="dropdown-item block font-normal border border-x-hcream border-t-hcream border-b-transparent px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen/60" role="menuitem">Gastos académicos</router-link>
+                                <router-link to="/soluciones/programas-de-intercambio" class="dropdown-item block font-normal border border-x-hcream border-t-hcream border-b-transparent px-4 text-left py-2 lg:text-sm text-[12px] text-black hover:text-hcream hover:bg-hgreen/60" role="menuitem">Programas de intercambio</router-link>
                             </div>
                         </div>
                         <!-- Contactanos -->
@@ -112,7 +112,7 @@ export default {
         color: black;
     }
     .dropdown-item:hover {
-        background-color: #424b35;
+        background-color: #424b35/50;
         color: white;
     }
 </style>

@@ -16,12 +16,12 @@ const routes: RouteRecordRaw[] = [
             //requireAuth: false
         },
     },
-    // { path: '/nosotros', component: () => import('./pages/NosotrosPage.vue'), name: 'Nosotros',
-    //     meta: {
-    //         title: "Nosotros | Humadeus",
-    //         //requireAuth: false
-    //     },
-    // },
+    { path: '/nosotros', component: () => import('./pages/NosotrosPage.vue'), name: 'Nosotros',
+        meta: {
+            title: "Nosotros | Humadeus",
+            //requireAuth: false
+        },
+    },
     { path: '/soluciones', component: () => import('./pages/SolucionesPage.vue'), name: 'soluciones',
         meta: {
             title: "Soluciones | Humadeus",
