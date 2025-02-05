@@ -130,13 +130,11 @@
                 <p class="text-gray-600 text-left text mb-6">
                 Te brindamos asesoría personalizada para que tomes la<br> decisión que mejor se adapte a tus necesidades.
                 </p>
-
                 <form class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="relative border-b border-gray-400">
                         <input
                             type="text"
-                            
                             placeholder="Nombre (s)"
                             class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
                         />
@@ -144,7 +142,6 @@
                         <div class="relative border-b border-gray-400">
                         <input
                             type="text"
-                            
                             placeholder="Apellido (s)"
                             class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
                         />
@@ -152,7 +149,6 @@
                         <div class="relative border-b border-gray-400">
                         <input
                             type="tel"
-                    
                             placeholder="Teléfono"
                             class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
                         />
@@ -162,13 +158,12 @@
                     <div class="relative flex gap-12">
                         <input
                         type="email"
-                        
                         placeholder="Correo electrónico"
                         class="md:w-[350px] w-full bg-transparent focus:outline-none py-2 text-gray-700 border-b border-gray-400"
                         />
                         <div class="flex items-center space-x-2">
-                            <label class="text-hgreen items-center justify-center"><input type="checkbox" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
-                            He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> Aviso de privacidad</a>.
+                            <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                            He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> Aviso de privacidad</a>.
                             </label>
                         </div>
                     </div>

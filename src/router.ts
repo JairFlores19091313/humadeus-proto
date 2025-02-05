@@ -28,12 +28,12 @@ const routes: RouteRecordRaw[] = [
             //requireAuth: false
         },
     },
-    // { path: '/contactanos', component: () => import('./pages/ContactoPage.vue'), name: 'Contactanos',
-    //     meta: {
-    //         title: "Contactanos | Humadeus",
-    //         //requireAuth: false
-    //     },
-    // },
+    { path: '/contactanos', component: () => import('./pages/ContactoPage.vue'), name: 'Contactanos',
+        meta: {
+            title: "Contactanos | Humadeus",
+            //requireAuth: false
+        },
+    },
     // { path: '/solicita-tu-credito', component: () => import('./pages/SolCredPage.vue'), name: 'Solicita tu credito',
     //     meta: {
     //         title: "Solicita tu crédito | Humadeus",
