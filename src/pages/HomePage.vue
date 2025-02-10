@@ -1,11 +1,11 @@
 <template>
     <div class="flex flex-col items-center justify-center w-full mt-[180px]">
-        <div class="flex items-center w-full max-w-[1200px] mb-8">
+        <div class="lg:flex items-center w-full max-w-[1200px] mb-8">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Simula</span> tu Crédito</h2>
                 <div class="flex w-full justify-start  max-w-[1200px]">
                     <div class="max-w-[1200px] mx-auto w-full bg-[#e1e2e0] p-8 rounded-none">
-                        <div class="flex justify-between w-full">
+                        <div class="lg:flex justify-between w-full">
                         <!-- Sección de simulador -->
                         <div class="mr-8 w-full">
                             <p class=" text-left">1. ¿Cuánto dinero necesitas?</p>
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <!-- Formulario -->
-            <div class="flex flex-col p-6 w-[32%] items-center justify-center bg-[white] border border-black">
+            <div class="flex flex-col p-6 lg:w-[32%] items-center justify-center bg-[white] border border-black">
                 <div class="flex flex-col w-full my-4 justify-center">
                     <p class="text-hgreen font-serif lg:text-[17px] mb-2 leading-tight">Continúa estudiando de la mano<br> de <b class="font-bold">Humadeus</b></p>
                     <p class="text-hgreen px-3 text-[16px] leading-tight mb-5">¡Pregúntanos cómo!</p>
@@ -139,9 +139,9 @@
             </div>
         </div>
         <div class="flex items-center w-full max-w-[1200px] mb-16">
-            <div class="flex flex-col max-w-[1200px] justify-start  w-full">
+            <div class="flex flex-col max-w-[1200px] justify-start lg:mx-0 mx-4 w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Pasos</span> para solicitar un Crédito Humadeus</h2>
-                <div class="flex w-full justify-start max-w-[1200px] text-left gap-8">
+                <div class="lg:flex w-full  grid md:grid-cols-2 grid-cols-1 justify-start max-w-[1200px] text-left gap-8">
                     <div class="bg-[#515e3a] flex flex-col content-between justify-between w-full">
                         <p class="text-white p-6 text-4xl mb-16 mt-2">1.</p>
                         <p class="text-white p-6">Debes estar <span class="font-bold">inscrito</span> a tu plan de estudios deseado.</p>
@@ -162,15 +162,15 @@
             </div>
         </div>
 
-        <div class="flex flex-col items-center w-full mb-16">
+        <div class="flex flex-col items-center w-full  mb-16">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Requisitos</span> para solicitar un Crédito</h2>
+                <h2 class=" font-serif text-2xl text-hgreen lg:mx-0 mx-4 text-left mb-4"><span class="font-bold">Requisitos</span> para solicitar un Crédito</h2>
             </div>
             <div class="flex flex-col bg-[#e1e2e0] justify-start items-center  w-screen">
                 <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                    <div class="flex justify-between items-center w-full py-8">
+                    <div class="lg:flex justify-between items-center  w-full py-8">
                         <!-- Texto -->
-                        <div class="w-[60%] text-justify mr-16">
+                        <div class="lg:w-[60%] text-justify lg:mr-16 lg:mx-0 mx-4">
                             <ul class="list-disc pl-5">
                             <li class="mb-3"><strong>Comprobante de inscripción o aceptación:</strong> Deberás presentar un documento que demuestre que has sido aceptado o estás inscrito en una institución educativa reconocida.</li >
                             <li class="mb-3"><strong>Identificación oficial:</strong> Necesitarás una identificación oficial vigente, como INE o pasaporte. Si el crédito requiere un aval, también deberás presentar su identificación.</li >
@@ -183,7 +183,7 @@
                         </div>
                         
                         <!-- Imagen (espacio en blanco) -->
-                        <img src="./images/imagen hombre lentes.png" class="w-[40%]">
+                        <img src="/images/imagen hombre lentes.png" class="lg:w-[40%]">
                     </div>
                 </div>
             </div>
@@ -191,30 +191,30 @@
 
         <div class="flex items-center w-full max-w-[1200px] mb-16">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Beneficios</span> de un Crédito Humadeus</h2>
-                <div class="flex w-full justify-start max-w-[1200px] text-center gap-10">
-                    <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-01.png" class=" mt-8 w-[126px] h-[126px]">
+                <h2 class=" font-serif lg:mx-0 mx-4 text-2xl text-hgreen text-left mb-4"><span class="font-bold">Beneficios</span> de un Crédito Humadeus</h2>
+                <div class="lg:flex w-full grid grid-cols-1 justify-start max-w-[1200px] text-center  gap-10">
+                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
+                        <img src="/images/iconos-beneficios-humadeus-01.png" class=" mt-8 w-[126px] h-[126px]">
                         <p class="font-bold text-lg p-2">Financiamiento flexible</p>
                         <p class="px-4 py-2">Te ofrecemos un plan económico accesible y personalizado.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-02.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
+                        <img src="/images/iconos-beneficios-humadeus-02.png" class=" mt-8 w-[126px] h-[126px]">
                         <p class="font-bold text-lg p-2">Apoyo<br> constante</p>
                         <p class="px-4 py-2">Acompañamiento en cada estado del proceso.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-03.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
+                        <img src="/images/iconos-beneficios-humadeus-03.png" class=" mt-8 w-[126px] h-[126px]">
                         <p class="font-bold text-lg p-2">Mentorias personalizadas</p>
                         <p class="px-4 py-2">Recibe orientación de profesionales experimentados.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-04.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
+                        <img src="/images/iconos-beneficios-humadeus-04.png" class=" mt-8 w-[126px] h-[126px]">
                         <p class="font-bold text-lg p-2">Periodo de<br> gracia</p>
                         <p class="px-4 py-2">Cuentas con 6 meses después de tu graduación para el retorno de tu crédito.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full">
-                        <img src="./images/iconos-beneficios-humadeus-05.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
+                        <img src="/images/iconos-beneficios-humadeus-05.png" class=" mt-8 w-[126px] h-[126px]">
                         <p class="font-bold text-lg px-4 py-2">Protección contra desempleo</p>
                         <p class="px-4 py-2">6 meses adicionales para el retorno de tu crédito en caso de desempleo.</p>
                     </div>
@@ -252,7 +252,7 @@
         <div class="flex items-center w-full max-w-[1200px] mb-16">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif text-2xl text-hgreen text-left mb-4">Te puede interesar:</h2>
-                <div class="flex w-full justify-start max-w-[1200px] text-center gap-10">
+                <div class="lg:flex w-full justify-start max-w-[1200px] text-center gap-10 lg:space-y-0 space-y-6">
                     <div class="border border-gray-300 flex flex-col content-between items-center justify-between w-full cursor-pointer" >
                         <img src="https://humanitas.edu.mx/blog/wp-content/uploads/2024/06/tipos-contabilidad-financiero.webp" class="w-full">
                         <p class="font-semibold text-lg leading-tight text-gray-500 p-4">Cómo ahorrar un poco de presupuesto.</p>
@@ -275,10 +275,10 @@
 
         <div class="flex flex-col items-center w-full max-w-[1200px] mb-16">
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                <h2 class=" font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Preguntas</span> frecuentes</h2>
+                <h2 class="lg:mx-0 mx-4 font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Preguntas</span> frecuentes</h2>
             </div>
-            <div class="flex justify-between items-center w-full">
-                <div class="w-1/2 mr-16">
+            <div class="lg:flex justify-between items-center w-full">
+                <div class="lg:w-1/2 lg:mr-16 lg:mx-0 mx-4">
                     <div class="mt-4 space-y-6">
                         <button class="w-full flex items-center bg-hgreen rounded-none text-white px-4 py-3 ">
                             <span class="text-3xl mr-4 font-bold">+</span>
@@ -302,7 +302,7 @@
                         </button>
                     </div>
                 </div>
-                <img src="./images/imagen mujer.webp" class="w-1/2">
+                <img src="/images/imagen mujer.webp" class="lg:w-1/2 lg:mt-0 mt-4">
             </div>
         </div>
     </div>

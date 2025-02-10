@@ -132,35 +132,41 @@
                 </p>
                 <form class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="relative border-b border-gray-400">
-                        <input
-                            type="text"
-                            placeholder="Nombre (s)"
-                            class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
-                        />
+                        <div class="relative  w-full ">
+                            <input
+                                type="text"
+                                placeholder=""
+                                class="w-full bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                            />
+                            <label>Nombre(s)</label>
                         </div>
-                        <div class="relative border-b border-gray-400">
-                        <input
-                            type="text"
-                            placeholder="Apellido (s)"
-                            class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
-                        />
+                        <div class="relative  w-full ">
+                            <input
+                                type="text"
+                                placeholder=""
+                                class="w-full bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                            />
+                            <label>Apellido(s)</label>
                         </div>
-                        <div class="relative border-b border-gray-400">
-                        <input
-                            type="tel"
-                            placeholder="Teléfono"
-                            class="w-full bg-transparent focus:outline-none py-2 text-gray-700"
-                        />
+                        <div class="relative  w-full ">
+                            <input
+                                type="tel"
+                                placeholder=""
+                                class="w-full bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                            />
+                            <label>Teléfono</label>
                         </div>
                     </div>
 
-                    <div class="relative flex gap-12">
-                        <input
-                        type="email"
-                        placeholder="Correo electrónico"
-                        class="md:w-[350px] w-full bg-transparent focus:outline-none py-2 text-gray-700 border-b border-gray-400"
-                        />
+                    <div class="relative lg:flex gap-12">
+                        <div class="flex flex-col  ">
+                            <input
+                                type="email"
+                                placeholder=""
+                                class="md:w-[350px] bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                            />
+                            <label>Correo electrónico</label>
+                        </div>
                         <div class="flex items-center space-x-2">
                             <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
                             He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> Aviso de privacidad</a>.
