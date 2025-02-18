@@ -54,7 +54,17 @@
                                 </button>
                             </router-link>
                         </div>
-                        <img src="../pages/images/lupa.png" class="w-8 cursor-pointer">
+                        <div class="relative" @mouseleave="startCloseTimerSearch">
+                            <img src="../pages/images/lupa.png" class="w-8 cursor-pointer" @click="toggleSearch">
+                            <input
+                                v-if="showSearch"
+                                type="text"
+                                v-model="searchQuery"
+                                @change="handleSearch"
+                                placeholder="Buscar..."
+                                class="absolute -right-32 top-0 w-48 px-4 py-2 focus:ring-0 focus:border-hgreen text-black transition-all rounded-none"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,6 +78,9 @@ export default {
         return {
             isOpen: false,
             closeTimer: 0,
+            searchQuery: "" as string,
+
+            showSearch: false as boolean,
         };
     },
     methods: {
@@ -83,9 +96,26 @@ export default {
                 this.closeDropdown();
             }, 120); // Espera 200ms antes de cerrar el menú
         },
+        startCloseTimerSearch() {
+            this.closeTimer = setTimeout(() => {
+                this.toggleSearch();
+            }, 120); // Espera 200ms antes de cerrar el menú
+        },
         cancelCloseTimer() {
-        clearTimeout(this.closeTimer); // Limpiar el temporizador si el usuario vuelve al menú antes de que se cierre
-        }
+            clearTimeout(this.closeTimer); // Limpiar el temporizador si el usuario vuelve al menú antes de que se cierre
+        },
+        toggleSearch() {
+            this.showSearch = !this.showSearch;
+        },
+        handleSearch() {
+            console.log("Search query:", this.searchQuery);
+            this.$emit("update:search", this.searchQuery);
+        },
+        onKeyPress(event: KeyboardEvent) {
+            if (event.key === "Enter") {
+                this.handleSearch();
+            }
+        },
     }
 }
 </script>

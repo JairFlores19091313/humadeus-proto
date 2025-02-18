@@ -4,18 +4,19 @@
             <div class="lg:flex lg:gap-16 md:gap-12 gap-8 md:pl-4 items-start justify-start md:pt-8 pt-4 w-full grid grid-cols-3">
                 <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/" class="mb-2">INICIO</router-link>
-                    <!-- <router-link to="/" class="mb-2 text-[12px]">ejemplo 1</router-link>
-                    <router-link to="/" class="mb-2 text-[12px]">ejemplo 2</router-link>
-                    <router-link to="/" class="mb-2 text-[12px]">ejemplo 3</router-link>
-                    <router-link to="/" class="mb-2 text-[12px]">ejemplo 4</router-link> -->
-                </div>
-                <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/nosotros" class="mb-2">NOSOTROS</router-link>
                     <!-- <router-link to="/" class="mb-2 text-[12px]">ejemplo 1</router-link>
                     <router-link to="/" class="mb-2 text-[12px]">ejemplo 2</router-link>
                     <router-link to="/" class="mb-2 text-[12px]">ejemplo 3</router-link>
                     <router-link to="/" class="mb-2 text-[12px]">ejemplo 4</router-link> -->
                 </div>
+                <!-- <div class="text-left justify-start text-hcream flex flex-col"> -->
+                    
+                    <!-- <router-link to="/" class="mb-2 text-[12px]">ejemplo 1</router-link>
+                    <router-link to="/" class="mb-2 text-[12px]">ejemplo 2</router-link>
+                    <router-link to="/" class="mb-2 text-[12px]">ejemplo 3</router-link>
+                    <router-link to="/" class="mb-2 text-[12px]">ejemplo 4</router-link> -->
+                <!-- </div> -->
                 <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/soluciones" class="mb-2">SOLUCIONES</router-link>
                     <router-link to="/soluciones/creditos-universitarios" class="mb-2 text-[12px]">Créditos universitarios</router-link>
