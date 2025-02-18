@@ -8,7 +8,10 @@
                         <div class="lg:flex justify-between w-full">
                         <!-- Sección de simulador -->
                         <div class="mr-8 w-full">
-                            <p class=" text-left">1. ¿Cuánto dinero necesitas?</p>
+                            <div class="flex justify-between w-[80%]">
+                                <p class=" text-left">1. ¿Cuánto dinero necesitas?</p>
+                                <span class="font-semibold text-gray-600">${{ amount.toLocaleString() }}</span>
+                            </div>
                             <div class="w-[80%] flex flex-col justify-start">
                                 <input type="range" v-model="amount" min="10000" max="100000" step="1000" class="w-full my-3 appearance-none accent-hgreen bg-white h-[6px] " />
 
@@ -37,7 +40,7 @@
 
                         <!-- Resultados -->
                         <div class="bg-white p-4 px-8 shadow w-[80%] text-left">
-                            <p class="font-bold px-1 text-hgreen" style="font-weight:700"><span class="font-bold">Préstamo por ${{ amount.toLocaleString() }} a {{ selectedTerm }} meses.</span></p>
+                            <p class="font-bold px-1 text-hgreen" ><span class="font-bold" >Préstamo por ${{ amount.toLocaleString() }} a  <span style="font-weight:900">{{ selectedTerm }} meses.</span></span></p>
                             <div class=" pt-2 text-gray-700">
                                 <p class="flex px-1 justify-between">
                                     <span>Total de pagos</span> 
@@ -79,15 +82,15 @@
                         <form autocomplete="off">
                             <div class="mx-2">
                                 <div class="user-box">
-                                    <input  type="text" id="name" name="nombre" required maxlength="30" class="">
+                                    <input  type="text" id="name" name="nombre" required maxlength="30" class="focus:ring-0">
                                     <label for="nombre" class=" italic">Nombre*</label>
                                 </div>
                                 <div class="user-box">
-                                    <input  type="text" id="apelidos" name="apellidos" required maxlength="55" class="">
+                                    <input  type="text" id="apelidos" name="apellidos" required maxlength="55" class="focus:ring-0">
                                     <label for="apellidos" class=" italic">Apellidos*</label>
                                 </div>
                                 <div class="user-box">
-                                    <input type="text" id="email" name="email" required class="">
+                                    <input type="text" id="email" name="email" required class="focus:ring-0">
                                     <label for="email" class=" italic">E-mail*</label>
                                 </div>
                                 <div class="user-box">
@@ -124,9 +127,9 @@
                                 </div> -->
                                 <div class="flex">
                                     <div class="flex justify-center items-center mb-6"> 
-                                        <label class="text-hgreen text-[11px] flex items-center justify-center"><input type="checkbox"  class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
-                                        He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-htwo">Aviso de privacidad</a>.
-                                        </label>
+                                        <p class="text-hgreen text-[11px] flex items-center justify-center"><input type="checkbox"  class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                                        He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-htwo"> &nbsp;aviso de privacidad</a>.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-center">
@@ -193,28 +196,28 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class=" font-serif lg:mx-0 mx-4 text-2xl text-hgreen text-left mb-4"><span class="font-bold">Beneficios</span> de un Crédito Humadeus</h2>
                 <div class="lg:flex w-full grid grid-cols-1 justify-start max-w-[1200px] text-center  gap-10">
-                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
-                        <img src="/images/iconos-beneficios-humadeus-01.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col lg:mx-0 mx-4 items-center  w-full">
+                        <img src="/images/iconos-beneficios-humadeus-01.png" class=" mt-8 w-[100.8px] h-[100.8px]">
                         <p class="font-bold text-lg p-2">Financiamiento flexible</p>
                         <p class="px-4 py-2">Te ofrecemos un plan económico accesible y personalizado.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
-                        <img src="/images/iconos-beneficios-humadeus-02.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col  lg:mx-0 mx-4 items-center  w-full">
+                        <img src="/images/iconos-beneficios-humadeus-02.png" class=" mt-8 w-[100.8px] h-[100.8px]">
                         <p class="font-bold text-lg p-2">Apoyo<br> constante</p>
                         <p class="px-4 py-2">Acompañamiento en cada estado del proceso.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
-                        <img src="/images/iconos-beneficios-humadeus-03.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col  lg:mx-0 mx-4 items-center  w-full">
+                        <img src="/images/iconos-beneficios-humadeus-03.png" class=" mt-8 w-[100.8px] h-[100.8px]">
                         <p class="font-bold text-lg p-2">Mentorias personalizadas</p>
                         <p class="px-4 py-2">Recibe orientación de profesionales experimentados.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
-                        <img src="/images/iconos-beneficios-humadeus-04.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col  lg:mx-0 mx-4 items-center  w-full">
+                        <img src="/images/iconos-beneficios-humadeus-04.png" class=" mt-8 w-[100.8px] h-[100.8px]">
                         <p class="font-bold text-lg p-2">Periodo de<br> gracia</p>
                         <p class="px-4 py-2">Cuentas con 6 meses después de tu graduación para el retorno de tu crédito.</p>
                     </div>
-                    <div class="border border-gray-300 flex flex-col content-between lg:mx-0 mx-4 items-center justify-between w-full">
-                        <img src="/images/iconos-beneficios-humadeus-05.png" class=" mt-8 w-[126px] h-[126px]">
+                    <div class="border border-gray-300 flex flex-col  lg:mx-0 mx-4 items-center w-full">
+                        <img src="/images/iconos-beneficios-humadeus-05.png" class=" mt-8 w-[100.8px] h-[100.8px]">
                         <p class="font-bold text-lg px-4 py-2">Protección contra desempleo</p>
                         <p class="px-4 py-2">6 meses adicionales para el retorno de tu crédito en caso de desempleo.</p>
                     </div>
@@ -235,6 +238,7 @@
                                 El proceso de solicitud fue rápido y sencillo. Humadeus me acompañó en cada paso, y ahora puedo enfocarme en mis estudios sin la carga económica.
                                 <span class="text-hgreen text-4xl ">”</span>
                             </p>
+                            <p class="font-serif text-center text-xl mt-4 text-hgreen">- Leticia</p>
                         </div>
                     </div>
 
@@ -277,32 +281,9 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class="lg:mx-0 mx-4 font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Preguntas</span> frecuentes</h2>
             </div>
-            <div class="lg:flex justify-between items-center w-full">
-                <div class="lg:w-1/2 lg:mr-16 lg:mx-0 mx-4">
-                    <div class="mt-4 space-y-6">
-                        <button class="w-full flex items-center bg-hgreen rounded-none text-white px-4 py-3 ">
-                            <span class="text-3xl mr-4 font-bold">+</span>
-                            <span>¿Cuánto terminaré pagando de interés?</span>
-                        </button>
-                    
-                        <button class="w-full flex items-center  bg-[#424b35]/90 rounded-none text-white px-4 py-3 ">
-                            <span class="text-3xl mr-4 font-bold">+</span>
-                            <span>¿Cuánto dinero me pueden prestar?</span>
-                        </button>
-
-                        <button class="w-full flex items-center  bg-[#424b35]/50 rounded-none text-white px-4 py-3 ">
-                            <span class="text-3xl mr-4 font-bold">+</span>
-                            <span>¿Cómo puedo realizar mis pagos?</span>
-                        </button>
-                    </div>
-                    <!-- Botón flotante -->
-                    <div class="mt-4 flex justify-end">
-                        <button class="w-2 py-1  flex items-center  bg-white border-gray-300 justify-center rounded-full">
-                            <span class="text-xl ">+</span>
-                        </button>
-                    </div>
-                </div>
-                <img src="/images/imagen mujer.webp" class="lg:w-1/2 lg:mt-0 mt-4">
+            <div class="lg:flex justify-between w-full">
+                <PreguntasCarrusel />
+                <img src="/images/imagen mujer.webp" class="lg:w-1/2 lg:mt-0 ">
             </div>
         </div>
     </div>
@@ -310,8 +291,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import PreguntasCarrusel from "./components/PreguntasCarrusel.vue";
 
 export default defineComponent({
+    components: {
+        PreguntasCarrusel, 
+    },
   data() {
     return {
       amount: 50000,

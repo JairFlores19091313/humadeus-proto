@@ -2,24 +2,26 @@
     <div class="flex flex-col items-center justify-center  mt-[180px] w-full">
         <div class="max-w-[1200px] w-full lg:mx-0 mx-4 mb-2">
             <h2 class="text-2xl text-hgreen text-left mb-4 font-serif">El futuro está <span class="font-semibold">en tus manos</span></h2>
-            <p class="text-justify">Deja tus datos y nos comunicaremos contigo para ofrecerte una solución financiera personalizada que se ajuste a tus necesidades.</p>
+            <p class="text-justify">Impulsa tus sueños hoy, invierte en tu educación y construye el mañana que deseas con las oportunidades que te acercan a un mejor futuro.</p>
         </div>
         <div class="flex flex-col bg-[#e1e2e0] justify-start items-center mb-16  w-screen">
-            <form class="bg-white border border-hgreen max-w-[1000px] w-full rounded-none my-8 space-y-6">
+            <div class="max-w-[1200px] w-full lg:mx-0 mx-4 mt-6">
+                <form class="bg-white border border-hgreen max-w-[1000px] w-full rounded-none mb-8 mt-6 space-y-6">
+                <p class="text-justify mx-8 mt-6">Deja tus datos y nos comunicaremos contigo para ofrecerte una solución financiera personalizada que se ajuste<br class="lg:block hidden"> a tus necesidades.</p>
                 <div class="flex flex-col mx-8">
-                    <div class="lg:flex gap-16 justify-between mt-6 w-full">
+                    <div class="lg:flex gap-16 justify-between w-full">
                         <div class="relative  w-full ">
                             <input
                                 type="text"
                                 placeholder=""
-                                class="w-full bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-gray-400 focus:border-hgreen border-t-0 border-x-0 border-b py-2 text-gray-700 focus:ring-0"
                             />
                             <label>Nombre(s)</label>
                         </div>
                         <div class="relative w-full">
                             <input
                                 type="text"
-                                class="w-full bg-transparent focus:outline-none border-b border-gray-400 py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-t-0 border-x-0 border-b border-gray-400 focus:border-hgreen py-2 text-gray-700 focus:ring-0"
                             />
                             <label>Apellido(s)</label>
                         </div>
@@ -29,14 +31,14 @@
                             <input
                                 type="text"
                                 placeholder=""
-                                class="w-full bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-t-0 border-x-0 border-gray-400 focus:border-hgreen border-b py-2 text-gray-700 focus:ring-0"
                             />
                             <label>Correo electrónico</label>
                         </div>
                         <div class="relative w-full">
                             <input
                                 type="text"
-                                class="w-full bg-transparent focus:outline-none border-b border-gray-400 py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-b border-t-0 border-x-0 focus:border-hgreen border-gray-400 py-2 text-gray-700 focus:ring-0"
                             />
                             <label>Número de celular</label>
                         </div>
@@ -46,42 +48,42 @@
                             <input
                                 type="text"
                                 placeholder=""
-                                class="w-full bg-transparent focus:outline-none border-gray-400 border-b py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-gray-400 border-t-0 focus:border-hgreen border-x-0 border-b py-2 text-gray-700 focus:ring-0"
                             />
                             <label>¿Qué deseas estudiar?</label>
                         </div>
                         <div class="relative w-full">
                             <input
                                 type="text"
-                                class="w-full bg-transparent focus:outline-none border-b border-gray-400 py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-t-0 border-x-0 border-b focus:border-hgreen border-gray-400 py-2 text-gray-700 focus:ring-0"
                             />
                             <label>Nombre de la universidad</label>
                         </div>
                     </div>
                     <div class="lg:flex gap-16 justify-between mt-6 w-full">
-                        <div class="relative  w-full">
-                            <label>¿Para qué requieres tu crédito</label>
-                            <select class="mt-1 w-[60%] bg-white border-gray-400 p-2 border rounded-none">
+                        <div class="relative items-center w-full">
+                            <p class="mt-3 mb-1">¿Para qué requieres tu crédito</p>
+                            <select class="w-[50%] bg-white border-gray-400  border rounded-none focus:ring-0 focus:border-hgreen">
                                 <option value="colegiatura">Pago de colegiatura</option>
                                 <option value="inscripcion">Pago de inscripción</option>
                                 <option value="material">Compra de material educativo</option>
                                 <option value="transporte">Gastos de transporte</option>
                                 <option value="alojamiento">Alojamiento y manutención</option>
                                 <option value="intercambio">Intercambio o movilidad académica</option>
-                            <option value="otros">Otros</option>
+                                <option value="otros">Otros</option>
                             </select>
                         </div>
                         <div class="relative w-full">
                             <input
                                 type="text"
-                                class="w-full bg-transparent focus:outline-none border-b border-gray-400 py-2 text-gray-700"
+                                class="w-full bg-transparent focus:outline-none border-t-0 border-x-0 border-b focus:border-hgreen border-gray-400 py-2 text-gray-700 focus:ring-0"
                             />
                             <label>Monto aproximado a solicitar</label>
                         </div>
                     </div>
                     <div class="flex items-center justify-end mt-6 space-x-2">
-                        <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
-                        He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> Aviso de privacidad</a>.
+                        <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                        He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> aviso de privacidad</a>.
                         </label>
                     </div>
                     <div class="flex items-end justify-end my-6">
@@ -89,6 +91,8 @@
                     </div>
                 </div>
             </form>
+            </div>
+            
         </div>
         <div class="flex items-center max-w-[1200px] gap-16 justify-between w-full lg:mx-0 mx-4 mb-16">
             <div class="flex flex-col space-y-4">
