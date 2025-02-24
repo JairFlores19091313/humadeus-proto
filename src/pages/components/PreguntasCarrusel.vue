@@ -1,37 +1,52 @@
 <template>
-    <div class="lg:w-1/2 lg:mr-16 lg:mx-0 mx-4 flex items-center h-full">
+    <div class="lg:mx-0 mx-4 space-y-3 flex flex-col w-full">
         <!-- Contenedor del carrusel -->
-        <div class="w-full space-y-3">
-            <!-- Mostrar 5 elementos actuales -->
-            <div
-                v-for="(item, index) in visibleItems"
-                :key="index"
-                class="flex flex-col items-center justify-center relative"
-            >
-                <!-- Pregunta -->
-                <button
-                    class="w-full flex items-center text-white rounded-none relative h-[66px] px-4 py-3 transition-all duration-300"
-                    :class="item.bg"
-                    @click="toggleAnswer(item)"
+        <div class="lg:flex gap-8 space-y-6 justify-between lg:items-start items-center w-full">
+            <div class="w-full space-y-3 h-full">
+                <!-- Mostrar 5 elementos actuales -->
+                <div
+                    v-for="(item, index) in visibleItems"
+                    :key="index"
+                    class="flex flex-col items-center justify-center relative"
                 >
-                    <span class="text-3xl mr-4 font-bold">{{ item.open ? '−' : '+' }}</span>
-                    <span>{{ item.question }}</span>
-                </button>
-                <!-- Respuesta desplegable -->
-                <div v-if="item.open" class="bg-white text-gray-600 p-3 absolute top-16 z-20 border">
-                    <span>{{ item.answer }}</span>
+                    <!-- Pregunta -->
+                    <button
+                        class="w-full flex items-center text-white rounded-none relative h-[70px] px-4 py-3 transition-all duration-300"
+                        :class="item.bg"
+                        @click="toggleAnswer(item)"
+                    >
+                        <span class="text-3xl mr-4 font-bold">{{ item.open ? '−' : '+' }}</span>
+                        <span>{{ item.question }}</span>
+                    </button>
+                    <!-- Respuesta desplegable -->
+                    <div v-if="item.open" class="bg-white text-[#444343] p-3  z-20 border">
+                        <span>{{ item.answer }}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    
-        <!-- Botones de navegación -->
-        <div class="ml-4 flex justify-between">
-            <button
-            @click="next"
-            class="w-10 h-10 flex items-center bg-white border border-gray-300 justify-center rounded-full shadow-md hover:bg-gray-100"
-            >
-            <span class="text-xl">↓</span>
-            </button>
+            <div class="lg:flex items-center">
+                <div class="flex lg:flex-col items-center justify-center lg:space-y-3 lg:mb-0 mb-6 lg:mr-8">
+                    <!-- Botones de navegación -->
+                    <div class="flex items-center justify-center">
+                        <button
+                        @click="prev"
+                        class="w-10 h-10 flex items-center bg-white border border-gray-300 justify-center rounded-full shadow-md hover:bg-gray-100"
+                        >
+                        <span class="text-xl">↑</span>
+                        </button>
+                    </div>
+                    <!-- Botones de navegación -->
+                    <div class="flex items-center justify-center">
+                        <button
+                        @click="next"
+                        class="w-10 h-10 flex items-center bg-white border border-gray-300 justify-center rounded-full shadow-md hover:bg-gray-100"
+                        >
+                        <span class="text-xl">↓</span>
+                        </button>
+                    </div>
+                </div>
+                <img src="/images/imagen mujer.webp" class=" lg:max-w-[600px] lg:max-h-[400px] lg:mt-0 h-auto">
+            </div>
         </div>
     </div>
 </template>
@@ -115,6 +130,10 @@
     // Función para avanzar al siguiente grupo de preguntas
     const next = () => {
         currentIndex.value = (currentIndex.value + 1) % items.value.length;
+    };
+
+    const prev = () => {
+        currentIndex.value = (currentIndex.value - 1 + items.value.length) % items.value.length;
     };
 
     // Función para alternar la visibilidad de la respuesta

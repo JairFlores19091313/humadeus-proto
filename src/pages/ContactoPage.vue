@@ -7,9 +7,9 @@
         <div class="flex flex-col bg-[#e1e2e0] justify-start items-center mb-16  w-screen">
             <div class="max-w-[1200px] w-full lg:mx-0 mx-4 mt-6">
                 <form class="bg-white border border-hgreen max-w-[1000px] w-full rounded-none mb-8 mt-6 space-y-6">
-                <p class="text-justify mx-8 mt-6">Deja tus datos y nos comunicaremos contigo para ofrecerte una solución financiera personalizada que se ajuste<br class="lg:block hidden"> a tus necesidades.</p>
-                <div class="flex flex-col mx-8">
-                    <div class="lg:flex gap-16 justify-between w-full">
+                <p class="text-justify md:mx-16 mx-8 mt-12">Deja tus datos y nos comunicaremos contigo para ofrecerte una solución financiera personalizada que se ajuste a tus necesidades.</p>
+                <div class="flex flex-col md:mx-16 mx-8">
+                    <div class="lg:flex gap-28 justify-between mt-6 w-full">
                         <div class="relative  w-full ">
                             <input
                                 type="text"
@@ -26,7 +26,7 @@
                             <label>Apellido(s)</label>
                         </div>
                     </div>
-                    <div class="lg:flex gap-16 justify-between mt-6 w-full">
+                    <div class="lg:flex gap-28 justify-between mt-6 w-full">
                         <div class="relative  w-full ">
                             <input
                                 type="text"
@@ -43,7 +43,7 @@
                             <label>Número de celular</label>
                         </div>
                     </div>
-                    <div class="lg:flex gap-16 justify-between mt-6 w-full">
+                    <div class="lg:flex gap-28 justify-between mt-6 w-full">
                         <div class="relative  w-full ">
                             <input
                                 type="text"
@@ -60,10 +60,10 @@
                             <label>Nombre de la universidad</label>
                         </div>
                     </div>
-                    <div class="lg:flex gap-16 justify-between mt-6 w-full">
+                    <div class="lg:flex gap-28 justify-between mt-6 w-full">
                         <div class="relative items-center w-full">
-                            <p class="mt-3 mb-1">¿Para qué requieres tu crédito</p>
-                            <select class="w-[50%] bg-white border-gray-400  border rounded-none focus:ring-0 focus:border-hgreen">
+                            <p class="mt-4 mb-1">¿Para qué requieres tu crédito</p>
+                            <select class="w-[55%] bg-white border-gray-400  border rounded-none focus:ring-0 focus:border-hgreen">
                                 <option value="colegiatura">Pago de colegiatura</option>
                                 <option value="inscripcion">Pago de inscripción</option>
                                 <option value="material">Compra de material educativo</option>
@@ -81,13 +81,15 @@
                             <label>Monto aproximado a solicitar</label>
                         </div>
                     </div>
-                    <div class="flex items-center justify-end mt-6 space-x-2">
-                        <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
-                        He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> aviso de privacidad</a>.
-                        </label>
-                    </div>
-                    <div class="flex items-end justify-end my-6">
-                        <button @click.prevent="" class="rounded-none font-serif transition duration-300 ease-in-out hover:border-hgreen hover:bg-white hover:text-hgreen flex items-center justify-center text-white bg-hgreen w-[120px] h-[35px]">Enviar</button>
+                    <div class="lg:flex gap-16 justify-between mt-16 mb-8 w-full">
+                        <div class="flex justify-end space-x-4 mb-6">
+                            <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                                &nbsp;&nbsp;He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen font-semibold hover:text-hcream"> aviso de privacidad</a>.
+                            </label>
+                        </div>
+                        <div class="flex items-end justify-end mb-6 ">
+                            <button @click.prevent="" class="rounded-none font-serif transition duration-300 ease-in-out hover:border-hgreen hover:bg-white hover:text-hgreen flex items-center justify-center text-white bg-hgreen w-[120px] h-[35px]">Enviar</button>
+                        </div>
                     </div>
                 </div>
             </form>

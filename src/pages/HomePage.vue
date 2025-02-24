@@ -14,7 +14,6 @@
                             </div>
                             <div class="w-[80%] flex flex-col justify-start">
                                 <input type="range" v-model="amount" min="10000" max="100000" step="1000" class="w-full my-3 appearance-none accent-hgreen bg-white h-[6px] " />
-
                                 <div class="flex justify-between text-sm text-gray-600">
                                     <span>$10,000</span>
                                     <span>$100,000</span>
@@ -73,7 +72,7 @@
                 </div>
             </div>
             <!-- Formulario -->
-            <div class="flex flex-col p-6 lg:w-[32%] items-center justify-center bg-[white] border border-black">
+            <div class="flex flex-col p-6 lg:w-[34%] items-center justify-center bg-[white] border border-black">
                 <div class="flex flex-col w-full my-4 justify-center">
                     <p class="text-hgreen font-serif lg:text-[17px] mb-2 leading-tight">Continúa estudiando de la mano<br> de <b class="font-bold">Humadeus</b></p>
                     <p class="text-hgreen px-3 text-[16px] leading-tight mb-5">¡Pregúntanos cómo!</p>
@@ -126,9 +125,9 @@
                                         <label class="italic" style="top: -25px;left: 0;color: white;font-size: 12px">Campus de Inter&eacute;s</label>
                                 </div> -->
                                 <div class="flex">
-                                    <div class="flex justify-center items-center mb-6"> 
-                                        <p class="text-hgreen text-[11px] flex items-center justify-center"><input type="checkbox"  class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
-                                        He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-htwo"> &nbsp;aviso de privacidad</a>.
+                                    <div class="flex justify-center items-center w-full mb-6"> 
+                                        <p class="text-hgreen text-[11px] flex items-center justify-center"><input type="checkbox"  class=" cursor-pointer whitespace-nowrap text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                                        He le&iacute;do y acepto el <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen font-semibold hover:text-hcream"> &nbsp;aviso de privacidad</a>
                                         </p>
                                     </div>
                                 </div>
@@ -281,10 +280,8 @@
             <div class="flex flex-col max-w-[1200px] justify-start  w-full">
                 <h2 class="lg:mx-0 mx-4 font-serif text-2xl text-hgreen text-left mb-4"><span class="font-bold">Preguntas</span> frecuentes</h2>
             </div>
-            <div class="lg:flex justify-between w-full">
-                <PreguntasCarrusel />
-                <img src="/images/imagen mujer.webp" class="lg:w-1/2 lg:mt-0 ">
-            </div>
+            <PreguntasCarrusel />
+            
         </div>
     </div>
 </template>

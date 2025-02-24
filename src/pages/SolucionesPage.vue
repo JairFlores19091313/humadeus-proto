@@ -16,7 +16,7 @@
                                 <hr class="mt-2 mb-4 w-[90%] border-gray-400">
                             </div>
                             <div class="flex flex-col px-4 items-center w-full">
-                                <div class="flex flex-col lg:mb-0 mb-4 space-y-2">
+                                <div class="flex flex-col mb-4 space-y-2">
                                     <div class="flex items-start space-x-2 px-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <polyline points="20 6 9 17 4 12" />
@@ -47,7 +47,7 @@
                                 <hr class="mt-2 mb-4 w-[90%] border-gray-400">
                             </div>
                             <div class="flex flex-col px-4 justify-center place-content-between items-center content-between w-full">
-                                <div class="flex flex-col lg:mb-0 mb-4 space-y-2">
+                                <div class="flex flex-col mb-4 space-y-2">
                                     <div class="flex items-start space-x-2 px-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <polyline points="20 6 9 17 4 12" />
@@ -72,7 +72,7 @@
                                 <hr class="mt-2 mb-4 w-[90%] border-gray-400">
                             </div>
                             <div class="flex flex-col px-4 items-center w-full">
-                                <div class="flex flex-col lg:mb-0 mb-4 space-y-2">
+                                <div class="flex flex-col mb-4 space-y-2">
                                     <div class="flex items-start space-x-2 px-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <polyline points="20 6 9 17 4 12" />
@@ -102,7 +102,7 @@
                                 <hr class="mt-2 mb-4 w-[90%] border-gray-400">
                             </div>
                             <div class="flex flex-col px-4 items-center w-full">
-                                <div class="flex flex-col lg:mb-0 mb-4 space-y-2">
+                                <div class="flex flex-col mb-4 space-y-2">
                                     <div class="flex items-start space-x-2 px-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <polyline points="20 6 9 17 4 12" />
@@ -126,7 +126,7 @@
         </div>
         <div class="flex flex-col border border-hgreen max-w-[1200px] w-full mb-16">
             <div class="mx-auto md:p-12 p-4 w-full">
-                <h2 class="text-lg text-left text-hgreen mb-2">¿Tienes alguna <span class="font-bold">pregunta?</span></h2>
+                <h2 class="text-lg text-left text-hgreen mb-6">¿Tienes alguna <span class="font-bold">pregunta?</span></h2>
                 <p class="text-gray-600 text-left text mb-6">
                 Te brindamos asesoría personalizada para que tomes <br>la decisión que mejor se adapte a tus necesidades.
                 </p>
@@ -168,7 +168,7 @@
                             <label class="lg:mb-0 mb-12">Correo electrónico</label>
                         </div>
                         <div class="flex space-x-2 md:items-end md:justify-end">
-                            <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer accent-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
+                            <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
                             He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream font-semibold"> aviso de privacidad</a>.
                             </label>
                         </div>

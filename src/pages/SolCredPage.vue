@@ -144,7 +144,7 @@
                         
                         <div class="flex items-end justify-end mt-6 w-full space-x-2">
                             <label class="text-hgreen flex items-center justify-center"><input type="checkbox" class=" cursor-pointer text-hgreen rounded-none w-4 h-4 text-hone bg-white focus:ring-white border-hgreen focus:ring-1 mr-1">
-                            He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen hover:text-hcream"> aviso de privacidad</a>.
+                            He le&iacute;do y acepto el &nbsp; <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="text-hgreen font-semibold hover:text-hcream"> aviso de privacidad</a>.
                             </label>
                         </div>
                         <div class="flex items-end justify-end w-full my-6">
