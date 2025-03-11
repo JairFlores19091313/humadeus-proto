@@ -1,7 +1,7 @@
 <template>
     <div class="lg:mx-0 mx-4 space-y-3 flex flex-col w-full">
         <!-- Contenedor del carrusel -->
-        <div class="lg:flex gap-8 space-y-6 justify-between lg:items-start items-center w-full">
+        <div class="lg:flex gap-8 justify-between lg:items-start items-center w-full">
             <div class="w-full space-y-3 h-full">
                 <!-- Mostrar 5 elementos actuales -->
                 <div
@@ -73,43 +73,43 @@
     { 
         question: "¿Cuáles son los requisitos para solicitar un crédito?", 
         answer: "Necesitas identificación oficial, comprobante de ingresos y buen historial crediticio.", 
-        bg: "bg-[#424b35]/95", 
+        bg: "bg-[#424b35] bg-opacity-[0.92]", 
         open: false 
     },
     { 
         question: "¿Qué pasa si me atraso en un pago?", 
         answer: "Se generarán intereses moratorios y podría afectar tu historial crediticio.", 
-        bg: "bg-[#424b35]/85", 
+        bg: "bg-[#424b35] bg-opacity-[0.84]", 
         open: false 
     },
     { 
         question: "¿Puedo liquidar mi crédito antes de tiempo?", 
         answer: "Sí, puedes hacer pagos anticipados sin penalización para reducir intereses.", 
-        bg: "bg-[#424b35]/75", 
+        bg: "bg-[#424b35] bg-opacity-[0.76]", 
         open: false 
     },
     { 
         question: "¿Cómo puedo realizar mis pagos?", 
         answer: "Puedes pagar en línea, en sucursal bancaria o con domiciliación a tu tarjeta.", 
-        bg: "bg-[#424b35]/65", 
+        bg: "bg-[#424b35] bg-opacity-[0.68]", 
         open: false 
     },
     { 
         question: "¿Cuánto dinero me pueden prestar?", 
         answer: "El monto depende de tu capacidad de pago y el tipo de crédito solicitado.", 
-        bg: "bg-[#424b35]/55", 
+        bg: "bg-[#424b35] bg-opacity-[0.60]", 
         open: false 
     },
     { 
         question: "¿Cuál es la tasa de interés actual?", 
         answer: "La tasa de interés varía según el crédito. Consulta nuestra web para más detalles.", 
-        bg: "bg-[#424b35]/45", 
+        bg: "bg-[#424b35] bg-opacity-[0.52]", 
         open: false 
     },
     { 
         question: "¿Puedo obtener un crédito sin historial crediticio?", 
         answer: "Sí, pero puede requerir un aval o garantía dependiendo del monto solicitado.", 
-        bg: "bg-[#424b35]/35", 
+        bg: "bg-[#424b35] bg-opacity-[0.46]", 
         open: false 
     }
     ]);

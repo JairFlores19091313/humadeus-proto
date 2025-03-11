@@ -1,0 +1,27 @@
+{
+    "/": {
+        "titulos": {
+            "h1": { "texto": "Página Principal" },
+            "h2": [
+                { "texto": "Simula tu Crédito" },
+                { "texto": "Pasos para solicitar un Crédito Humadeus" },
+                { "texto": "Requisitos para solicitar un Crédito" },
+                { "texto": "Beneficios de un Crédito Humadeus" },
+                { "texto": "Voces de nuestros estudiantes" }
+            ],
+            "h3": [
+                { "texto": "Subsección Importante 1" },
+                { "texto": "Subsección Importante 2" }
+            ],
+            "h4": [
+                { "texto": "Detalle de la Subsección 1" },
+                { "texto": "Detalle de la Subsección 2" }
+            ]
+        },
+        "parrafos": [
+            "Este es el primer párrafo de contenido.",
+            "Aquí hay otro párrafo que proporciona más información.",
+            "Un tercer párrafo con detalles adicionales."
+        ]
+    }
+}

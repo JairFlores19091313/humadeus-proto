@@ -8,15 +8,33 @@
                         <div class="lg:flex justify-between w-full">
                         <!-- Sección de simulador -->
                         <div class="mr-8 w-full">
-                            <div class="flex justify-between w-[80%]">
-                                <p class=" text-left">1. ¿Cuánto dinero necesitas?</p>
-                                <span class="font-semibold text-gray-600">${{ amount.toLocaleString() }}</span>
-                            </div>
-                            <div class="w-[80%] flex flex-col justify-start">
-                                <input type="range" v-model="amount" min="10000" max="100000" step="1000" class="w-full my-3 appearance-none accent-hgreen bg-white h-[6px] " />
+                            <div class="w-[80%] relative">
+                                <div class="flex justify-between mb-2">
+                                    <p class="text-left">1. ¿Cuánto dinero necesitas?</p>
+                                </div>
+                                <div class="flex justify-between mb-8">
+                                    <span
+                                        class="font-semibold text-gray-600 absolute transition-transform duration-200"
+                                        :style="{ left: labelPosition + 'px', transform: 'translateX(-50%)' }"
+                                    >
+                                        ${{ amount.toLocaleString() }}
+                                    </span>
+                                </div>
+                                <div class="w-full flex flex-col justify-start">
+                                <input
+                                    type="range"
+                                    v-model="amount"
+                                    min="10000"
+                                    max="100000"
+                                    step="1000"
+                                    class="w-full my-3 appearance-none accent-hgreen bg-white h-[6px]"
+                                    ref="slider"
+                                    @input="updateLabelPosition"
+                                />
                                 <div class="flex justify-between text-sm text-gray-600">
                                     <span>$10,000</span>
                                     <span>$100,000</span>
+                                </div>
                                 </div>
                             </div>
                             <p class=" mt-8 text-left">2. ¿En qué plazo deseas liquidar tu crédito? (meses).</p>
@@ -294,61 +312,75 @@ export default defineComponent({
     components: {
         PreguntasCarrusel, 
     },
-  data() {
-    return {
-      amount: 50000,
-      terms: [6, 12, 18, 24, 32],
-      selectedTerm: 12,
-      interestRate: 0.2, // 20% de interés estimado
-      selectedCountry: "+52",
-      ladas: [
-        { codigo: "mx", lada: "+52", nombre: "México" },
-        { codigo: "us", lada: "+1", nombre: "Estados Unidos" },
-        { codigo: "ca", lada: "+1", nombre: "Canadá" },
-        { codigo: "gb", lada: "+44", nombre: "Reino Unido" },
-        { codigo: "es", lada: "+34", nombre: "España" },
-        { codigo: "ar", lada: "+54", nombre: "Argentina" },
-        { codigo: "br", lada: "+55", nombre: "Brasil" },
-        { codigo: "cl", lada: "+56", nombre: "Chile" },
-        { codigo: "co", lada: "+57", nombre: "Colombia" },
-        { codigo: "pe", lada: "+51", nombre: "Perú" },
-        { codigo: "ve", lada: "+58", nombre: "Venezuela" },
-        { codigo: "ec", lada: "+593", nombre: "Ecuador" },
-        { codigo: "bo", lada: "+591", nombre: "Bolivia" },
-        { codigo: "py", lada: "+595", nombre: "Paraguay" },
-        { codigo: "uy", lada: "+598", nombre: "Uruguay" },
-        { codigo: "pa", lada: "+507", nombre: "Panamá" },
-        { codigo: "cr", lada: "+506", nombre: "Costa Rica" },
-      ],
-    };
-  },
-  computed: {
-  interest(): number {
-    return Math.round(this.amount * this.interestRate);
-  },
-  totalToPay(): number {
-    return Math.round(this.amount * (1 + this.interestRate)); // Se evita la referencia a this.interest
-  },
-  monthlyPayment(): number {
-    return Math.round(this.totalToPay / this.selectedTerm);
-  },
-},
-  methods: {
-    calculate() {
-      console.log("Calculando crédito para", this.amount, "a", this.selectedTerm, "meses");
+    data() {
+        return {
+            amount: 50000,
+            terms: [6, 12, 18, 24, 32],
+            selectedTerm: 12,
+            labelPosition: 0,
+            interestRate: 0.2, // 20% de interés estimado
+            selectedCountry: "+52",
+            ladas: [
+                { codigo: "mx", lada: "+52", nombre: "México" },
+                { codigo: "us", lada: "+1", nombre: "Estados Unidos" },
+                { codigo: "ca", lada: "+1", nombre: "Canadá" },
+                { codigo: "gb", lada: "+44", nombre: "Reino Unido" },
+                { codigo: "es", lada: "+34", nombre: "España" },
+                { codigo: "ar", lada: "+54", nombre: "Argentina" },
+                { codigo: "br", lada: "+55", nombre: "Brasil" },
+                { codigo: "cl", lada: "+56", nombre: "Chile" },
+                { codigo: "co", lada: "+57", nombre: "Colombia" },
+                { codigo: "pe", lada: "+51", nombre: "Perú" },
+                { codigo: "ve", lada: "+58", nombre: "Venezuela" },
+                { codigo: "ec", lada: "+593", nombre: "Ecuador" },
+                { codigo: "bo", lada: "+591", nombre: "Bolivia" },
+                { codigo: "py", lada: "+595", nombre: "Paraguay" },
+                { codigo: "uy", lada: "+598", nombre: "Uruguay" },
+                { codigo: "pa", lada: "+507", nombre: "Panamá" },
+                { codigo: "cr", lada: "+506", nombre: "Costa Rica" },
+            ],
+        };
     },
-  },
+    computed: {
+        interest(): number {
+            return Math.round(this.amount * this.interestRate);
+        },
+        totalToPay(): number {
+            return Math.round(this.amount * (1 + this.interestRate)); // Se evita la referencia a this.interest
+        },
+        monthlyPayment(): number {
+            return Math.round(this.totalToPay / this.selectedTerm);
+        },
+    },
+    mounted() {
+        this.updateLabelPosition();
+    },
+    methods: {
+        calculate() {
+            console.log("Calculando crédito para", this.amount, "a", this.selectedTerm, "meses");
+        },
+        updateLabelPosition() {
+            const slider = this.$refs.slider as HTMLInputElement;
+            if (!slider) return;
+
+            const min = parseInt(slider.min);
+            const max = parseInt(slider.max);
+            const rangeWidth = slider.clientWidth;
+            const valueRatio = (this.amount - min) / (max - min);
+
+            // Ajuste para centrar el label respecto al thumb
+            this.labelPosition = valueRatio * rangeWidth;
+        }
+    },
+    watch: {
+        amount() {
+            this.updateLabelPosition();
+        }
+    }
 });
 </script>
 
 <style scoped>
-    .parallax-section {
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      background-image: url('/images/columnasMB.png');
-    }
-
     .dropdown-item {
       font-family: 'Helvetica Neue Italic', sans-serif;
       font-size: 14px;
@@ -371,6 +403,12 @@ export default defineComponent({
     
     
   }
+
+  .span-slider {
+    position: absolute;
+    top: -24px;
+    white-space: nowrap;
+    }
 
   .login-box h2 {
     margin: 0 0 0px;

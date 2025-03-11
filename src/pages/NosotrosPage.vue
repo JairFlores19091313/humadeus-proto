@@ -16,45 +16,85 @@
             </div>
         </div>
         <div class="max-w-[1200px] w-full mx-auto mb-16">
-            <div class="lg:flex justify-between text-left gap-6 relative z-10 w-full bg-white">
-                <div class="flex flex-col lg:w-[66%] ">
-                    <div class="flex w-full  gap-3">
-                        <div class=" w-full lg:ml-0 ml-4 pr-6">
-                            <h2 class="text-2xl text-hgreen mb-[24px] font-serif">Nuestra <span class="font-semibold">Misión</span></h2>
-                            <p class=" text-justify mt-2">
-                            <strong class="font-semibold">Facilitar</strong> el acceso a la educación universitaria a través de soluciones financieras accesibles, flexibles y 
-                            <strong class="font-semibold">adaptadas</strong> a las necesidades de cada estudiante, promoviendo el desarrollo integral y el <strong class="font-semibold">crecimiento profesional</strong> 
-                            de nuestros beneficiarios.
-                            </p>
-                        </div>
-
-                        <div class="lg:mr-0 mr-4 w-full lg:border-x-[1.5px] border-l border-hgreen">
-                            <h2 class="text-2xl pl-7 text-hgreen mb-[24px] font-serif">Nuestra <span class="font-semibold">Visión</span></h2>
-                            <p class="lg:px-7 pl-6 text-justify mt-2">
-                            Ser el <strong class="font-semibold">motor financiero</strong> que impulse el talento y las aspiraciones de los jóvenes, apoyando su educación y formando 
-                            <strong class="font-semibold">futuros líderes</strong> que generen un impacto positivo en sus comunidades y el mundo.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="relative my-8 w-full overflow-visible">
-                        <img
-                        src="../pages/images/imagen-cielo.webp"
-                        alt="El futuro en tus manos"
-                        class=" w-full object-cover"
-                        />
-                    </div>
+            <div class="grid px-2 md:grid-cols-[auto_auto_auto] gx:grid-rows-5 gx:grid-cols-[auto_auto_auto_auto_auto] text-left gap-y-12 md:gap-x-4 gx:gap-6 relative z-10 w-full gx:h-[600px] bg-white">
+                <div class="order-1 w-full space-y-6 gx:px-2 gx:row-span-2">
+                    <h2 class="text-2xl text-hgreen font-serif">Nuestra <span class="font-semibold">Misión</span></h2>
+                    <p class=" text-justify">
+                    <strong class="font-semibold">Facilitar</strong> el acceso a la educación universitaria a través de soluciones financieras accesibles, flexibles y 
+                    <strong class="font-semibold">adaptadas</strong> a las necesidades de cada estudiante, promoviendo el desarrollo integral y el <strong class="font-semibold">crecimiento profesional</strong> 
+                    de nuestros beneficiarios.
+                    </p>
                 </div>
-                <div class="lg:w-[33%] lg:pl-3 lg:mx-0 mx-4">
-                    <h2 class="text-2xl text-hgreen mb-[24px] font-serif">Nuestros <span class="font-semibold">Valores</span></h2>
-                    <ul class=" text-justify mt-2 space-y-3">
-                    <li><strong class="font-semibold">Accesibilidad:</strong> Humadeus se compromete a ofrecer soluciones financieras accesibles a todos los estudiantes, eliminando las barreras económicas que puedan impedir su desarrollo académico.</li>
-                    <li><strong class="font-semibold">Compromiso Social:</strong> Creemos en la educación como un derecho fundamental y trabajamos para que nuestros préstamos tengan un impacto positivo, tanto en la vida de los estudiantes como en la sociedad en general.</li>
-                    <li><strong class="font-semibold">Responsabilidad:</strong> Gestionamos nuestros recursos y operaciones con transparencia y profesionalismo, siempre buscando el bienestar de nuestros clientes y el cumplimiento de sus objetivos educativos.</li>
-                    <li><strong class="font-semibold">Innovación:</strong> Ofrecemos productos financieros innovadores que se adapten a las necesidades cambiantes de los estudiantes, utilizando tecnología y análisis para mejorar la experiencia del cliente.</li>
+
+                <div class="hidden md:flex md:order-2 border-l-[1.5px] border-hgreen gx:row-span-2">
+                </div>
+
+                <div class="order-2 md:order-3 w-full space-y-6 gx:px-2 gx:row-span-2">
+                    <h2 class="text-2xl text-hgreen font-serif">Nuestra <span class="font-semibold">Visión</span></h2>
+                    <p class="text-justify">
+                    Ser el <strong class="font-semibold">motor financiero</strong> que impulse el talento y las aspiraciones de los jóvenes, apoyando su educación y formando 
+                    <strong class="font-semibold">futuros líderes</strong> que generen un impacto positivo en sus comunidades y el mundo.
+                    </p>
+                </div>
+                
+                <div class="hidden gx:flex gx:order-4 border-l-[1.5px] border-hgreen gx:row-span-2">
+                </div>
+                
+                <div class="order-3 md:order-4 gx:order-5 w-full col-span-1 md:col-span-3 gx:col-span-1 space-y-6 gx:row-span-3">
+                    <h2 class="text-2xl text-hgreen font-serif">Nuestros <span class="font-semibold">Valores</span></h2>
+                    <ul class=" text-justify space-y-6">
+                        <li><strong class="font-semibold">Accesibilidad:</strong> Humadeus se compromete a ofrecer soluciones financieras accesibles a todos los estudiantes, eliminando las barreras económicas que puedan impedir su desarrollo académico.</li>
+                        <li><strong class="font-semibold">Compromiso Social:</strong> Creemos en la educación como un derecho fundamental y trabajamos para que nuestros préstamos tengan un impacto positivo, tanto en la vida de los estudiantes como en la sociedad en general.</li>
+                        <li><strong class="font-semibold">Responsabilidad:</strong> Gestionamos nuestros recursos y operaciones con transparencia y profesionalismo, siempre buscando el bienestar de nuestros clientes y el cumplimiento de sus objetivos educativos.</li>
+                        <li><strong class="font-semibold">Innovación:</strong> Ofrecemos productos financieros innovadores que se adapten a las necesidades cambiantes de los estudiantes, utilizando tecnología y análisis para mejorar la experiencia del cliente.</li>
                     </ul>
+                </div>
+
+                <!-- <div class="order-5 gx:order-6 relative gx:col-span-4 gx:row-span-2 gx:h-[350px] bg-bottom bg-no-repeat w-full h-full flex items-end"> -->
+                <div class="order-4 md:order-5 gx:order-6 relative md:col-span-3 gx:col-span-4 gx:row-span-3 bg-bottom bg-no-repeat w-full h-full flex items-end">
+                    <div class="absolute inset-0 flex items-center justify-center w-full h-full">
+                        <h1 class="uppercase font-serif text-3xl text-hgreen text-center tracking-widest">El futuro en tus manos</h1>
+                    </div>
+                    <img src="../pages/images/imagen-cielo.webp" alt="El futuro en tus manos" class="w-full h-full object-cover" />
                 </div>
             </div>
         </div>
+        
+        <!-- <div class="max-w-[1200px] w-full h-auto mx-auto mb-16">
+            <div class="grid grid-cols-3 grid-rows-[auto_1fr_auto] text-left gap-6 relative z-10 w-full bg-white">
+                <div class="w-full space-y-3">
+                    <h2 class="text-2xl text-hgreen font-serif">Nuestra <span class="font-semibold">Misión</span></h2>
+                    <p class="text-justify">
+                        <strong class="font-semibold">Facilitar</strong> el acceso a la educación universitaria a través de soluciones financieras accesibles, flexibles y 
+                        <strong class="font-semibold">adaptadas</strong> a las necesidades de cada estudiante, promoviendo el desarrollo integral y el 
+                        <strong class="font-semibold">crecimiento profesional</strong> de nuestros beneficiarios.
+                    </p>
+                </div>
+
+                <div class="w-full space-y-3">
+                    <h2 class="text-2xl text-hgreen font-serif">Nuestra <span class="font-semibold">Visión</span></h2>
+                    <p class="text-justify">
+                        Ser el <strong class="font-semibold">motor financiero</strong> que impulse el talento y las aspiraciones de los jóvenes, apoyando su educación y formando 
+                        <strong class="font-semibold">futuros líderes</strong> que generen un impacto positivo en sus comunidades y el mundo.
+                    </p>
+                </div>
+
+                <div class="w-full h-2/3 space-y-3 row-span-3">
+                    <h2 class="text-2xl text-hgreen font-serif">Nuestros <span class="font-semibold">Valores</span></h2>
+                    <ul class="text-justify space-y-3">
+                        <li><strong class="font-semibold">Accesibilidad:</strong> Humadeus se compromete a ofrecer soluciones financieras accesibles a todos los estudiantes, eliminando las barreras económicas que puedan impedir su desarrollo académico.</li>
+                        <li><strong class="font-semibold">Compromiso Social:</strong> Creemos en la educación como un derecho fundamental y trabajamos para que nuestros préstamos tengan un impacto positivo, tanto en la vida de los estudiantes como en la sociedad en general.</li>
+                        <li><strong class="font-semibold">Responsabilidad:</strong> Gestionamos nuestros recursos y operaciones con transparencia y profesionalismo, siempre buscando el bienestar de nuestros clientes y el cumplimiento de sus objetivos educativos.</li>
+                        <li><strong class="font-semibold">Innovación:</strong> Ofrecemos productos financieros innovadores que se adapten a las necesidades cambiantes de los estudiantes, utilizando tecnología y análisis para mejorar la experiencia del cliente.</li>
+                    </ul>
+                </div>
+
+                <div class="col-span-2 row-span-2 h-2/3 bg-bottom bg-no-repeat">
+                    <img src="../pages/images/imagen-cielo.webp" alt="El futuro en tus manos" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div> -->
+
         <div class="max-w-[1200px] w-full mx-auto mb-16">
             <div class="lg:flex justify-center  items-start lg:gap-16 w-full mb-16">
                 <div class="flex flex-col justify-center text-justify lg:mb-0 mb-8">
