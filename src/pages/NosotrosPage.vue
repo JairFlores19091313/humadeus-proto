@@ -52,8 +52,8 @@
 
                 <!-- <div class="order-5 gx:order-6 relative gx:col-span-4 gx:row-span-2 gx:h-[350px] bg-bottom bg-no-repeat w-full h-full flex items-end"> -->
                 <div class="order-4 md:order-5 gx:order-6 relative md:col-span-3 gx:col-span-4 gx:row-span-3 bg-bottom bg-no-repeat w-full h-full flex items-end">
-                    <div class="absolute inset-0 flex items-center justify-center w-full h-full">
-                        <h1 class="uppercase font-serif text-3xl text-hgreen text-center tracking-widest">El futuro en tus manos</h1>
+                    <div class="absolute inset-0 lg:mt-24 md:mt-12 mt-8 flex justify-center w-full h-full">
+                        <h1 class="uppercase font-serif md:text-3xl text-xl text-hgreen text-center tracking-widest">El futuro en tus manos</h1>
                     </div>
                     <img src="../pages/images/imagen-cielo.webp" alt="El futuro en tus manos" class="w-full h-full object-cover" />
                 </div>

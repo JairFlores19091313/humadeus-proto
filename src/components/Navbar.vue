@@ -1,12 +1,12 @@
 <template>
     <nav class="bg-hgreen lg:max-w-[1200px] z-[48]">
-        <div class="fixed top-0 left-0 w-full bg-hgreen flex flex-col items-center min-h-[86px] font-thin justify-center shadow-md z-[48]">
+        <div class="fixed top-0 left-0 w-full bg-hgreen flex flex-col items-center min-h-[86px] font-thin justify-center shadow-md shadow-white z-[48]">
             <div class="flex justify-between items-center lg:max-w-[1200px] w-full py-2">
                 <router-link to="/"><img src="../pages/images/Logotipo-Humadeus.png" class="w-[165px]"></router-link>
                 <div class="flex flex-col items-center justify-center">
                     <div class="flex justify-between items-center mb-4 w-full">
-                        <img src="../pages/images/El-futuro-en-tus-manos.png" class="w-[307px] h-[20px]">
-                        <a href="https://humanitas.edu.mx/usuarios" target="_blank" class="">
+                        <img src="../pages/images/El-futuro-en-tus-manos.png" class="w-[307px] h-[20px] md:block hidden">
+                        <a href="https://humanitas.edu.mx/usuarios" target="_blank" class="md:block hidden">
                             <div class="flex items-center justify-center hover:bg-white hover:text-hgreen font-normal bg-hgreen border border-white text-white text-lg transition duration-300 ease-in-out">
                                 <span class="py-2 px-3">Inicio de sesión</span>
                             </div>
@@ -17,7 +17,7 @@
                             <a href="https://www.linkedin.com/school/universidad-humanitas/mycompany/" target="_blank"><img src="../pages/images/iconos-linkedin-sociales-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4"></a>
                         </div>
                     </div>
-                    <div class="flex justify-between relative items-center lg:space-x-8">
+                    <div class="lg:flex justify-between relative items-center lg:space-x-8">
                         <!-- nosotros -->
                         <div class="relative items-center flex justify-between">
                             <router-link to="/nosotros">
@@ -60,7 +60,7 @@
                                 v-if="showSearch"
                                 type="text"
                                 v-model="searchQuery"
-                                @change="handleSearch"
+                                @change="search"
                                 placeholder="Buscar..."
                                 class="absolute -right-32 top-0 w-48 px-4 py-2 focus:ring-0 focus:border-hgreen text-black transition-all rounded-none"
                             />
@@ -73,7 +73,127 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+
+interface Titulo {
+  texto: string;
+}
+
+interface RutaData {
+  titulos: {
+    h1: Titulo;
+    h2: Titulo[];
+    h3: Titulo[];
+    h4: Titulo[];
+  };
+  parrafos: { texto: string }[];
+}
+
+const jsonData: Record<string, RutaData> = {
+    "/": {
+        titulos: {
+            h1: { texto: "Página principal" },
+            h2: [
+                { "texto": "Simula tu Crédito" },
+                { "texto": "Pasos para solicitar un Crédito Humadeus" },
+                { "texto": "Requisitos para solicitar un Crédito" },
+                { "texto": "Beneficios de un Crédito Humadeus" },
+                { "texto": "Realiza el primer pago de tu cuota mensual." },
+                { "texto": "Voces de nuestros estudiantes" }
+            ],
+            h3: [],
+            h4: []
+        },
+        parrafos: [
+            { texto: "Debes estar inscrito a tu plan de estudios deseado." },
+            { texto: "Entrega los documentos solicitados y firma el acuerdo." },
+            { texto: "Realiza el primer pago de tu cuota mensual." },
+            { texto: "Historial crediticio: En Humadeus, evaluamos el historial crediticio del solicitante o del aval." },
+            { texto: "Contacta a un asesor para acomodar tu crédito a plan de pagos." },
+            { texto: "Documentación" }
+        ]
+    },
+    "solicita-tu-credito": {
+        titulos: {
+            h1: { texto: "Solicita tu crédito" },
+            h2: [
+                { "texto": "Formulario de Solicitud" },
+            ],
+            h3: [],
+            h4: []
+        },
+        parrafos: [
+            { texto: "Si has decidido solicitar un Crédito Humadeus, puedes llenar el siguiente formulario de solicitud en línea para iniciar tu proceso." },
+        ]
+    },
+    "soluciones": {
+        titulos: {
+            h1: { texto: "Soluciones" },
+            h2: [
+                { "texto": "Nuestros Productos Financieros" },
+                { "texto": "¿Tienes alguna pregunta?" },
+                { "texto": "Requisitos para solicitar un Crédito" },
+                { "texto": "Beneficios de un Crédito Humadeus" },
+                { "texto": "Realiza el primer pago de tu cuota mensual." },
+                { "texto": "Voces de nuestros estudiantes" }
+            ],
+            h3: [
+                { "texto": "Créditos para Colegiaturas Universitarias" },
+                { "texto": "Créditos para Gastos Académicos" },
+                { "texto": "Créditos para Programas de Intercambio y Especialización" },
+                { "texto": "Créditos para Cursos de Educación Continua" }
+            ],
+            h4: []
+        },
+        parrafos: [
+            { texto: "En Humadeus, trabajamos contigo para facilitar tu camino hacia el éxito académico. Ofrecemos opciones de financiamiento educativo diseñadas a la medida, pensando en tus objetivos y en el bienestar de tu familia. Nuestro compromiso es brindarte soluciones flexibles y accesibles, conoce nuestras alternativas." },
+            { texto: "Préstamos diseñados para cubrir el costo total o parcial de las colegiaturas universitarias." },
+            { texto: "Opciones de pagos mensuales a largo plazo y tasas accesibles." },
+            { texto: "Financiamiento para libros, materiales, equipos y otros gastos relacionados con la educación." },
+            { texto: "Préstamos que permiten a los estudiantes financiar estancias en el extranjero." },
+            { texto: "Préstamos que permiten a los estudiantes financiar programas especializados, facilitando su formación global." },
+            { texto: "Apoyo financiero para quienes buscan ampliar sus conocimientos o adquirir nuevas competencias a través de cursos y diplomados." },
+            { texto: "Te brindamos asesoría personalizada para que tomes la decisión que mejor se adapte a tus necesidades." },
+        ]
+    },
+    "/nosotros": {
+        titulos: {
+            h1: { texto: "Nosotros" },
+            h2: [
+                { texto: "Qué es Humadeus" },
+                { texto: "Nuestra Misión" },
+                { texto: "Nuestra Visión" },
+                { texto: "Nuestros Valores" },
+                { texto: "Un compromiso con la sociedad" },
+                { texto: "Nuestras certificaciones nos respaldan" },
+            ],
+            h3: [
+                { texto: "Becas y Fondos de Apoyo" },
+                { texto: "Programas de Educación Financiera" },
+            ],
+            h4: []
+        },
+        parrafos: [
+            { texto: "Facilitar el acceso a la educación universitaria a través de soluciones financieras accesibles, flexibles y adaptadas a las necesidades de cada estudiante, promoviendo el desarrollo integral y el crecimiento profesional de nuestros beneficiarios." },
+            { texto: "Ser el motor financiero que impulse el talento y las aspiraciones de los jóvenes, apoyando su educación y formando futuros líderes que generen un impacto positivo en sus comunidades y el mundo." },
+            { texto: "Accesibilidad: Humadeus se compromete a ofrecer soluciones financieras accesibles a todos los estudiantes, eliminando las barreras económicas que puedan impedir su desarrollo académico." },
+            { texto: "Compromiso Social: Creemos en la educación como un derecho fundamental y trabajamos para que nuestros préstamos tengan un impacto positivo, tanto en la vida de los estudiantes como en la sociedad en general." },
+            { texto: "Responsabilidad: Gestionamos nuestros recursos y operaciones con transparencia y profesionalismo, siempre buscando el bienestar de nuestros clientes y el cumplimiento de sus objetivos educativos." },
+            { texto: "Innovación: Ofrecemos productos financieros innovadores que se adapten a las necesidades cambiantes de los estudiantes, utilizando tecnología y análisis para mejorar la experiencia del cliente." },
+            { texto: "Respaldo y confianza: Nuestra experiencia y transparencia nos convierten en una opción segura y reconocida en el mercado financiero." },
+            { texto: "Créditos personalizados: Diseñamos soluciones hechas a la medida de tus necesidades y capacidades de pago." },
+            { texto: "Atención cercana y profesional: Te acompañamos en cada paso del proceso, brindándote asesoría clara y eficiente." },
+            { texto: "Tasas competitivas: Ofrecemos condiciones accesibles para que cumplas tus objetivos sin comprometer tu estabilidad económica." },
+            { texto: "Flexibilidad de plazos: Tú decides los términos que mejor se adapten a tu situación." },
+            { texto: "Compromiso con tus sueños: No solo otorgamos créditos, somos tu aliado en la construcción de tu futuro." },
+            { texto: "Alcance internacional: Podemos apoyarteb en cualquier parte del mundo." },
+            { texto: "Con Humadeus, estás en buenas manos. ¡Solicita tu crédito hoy y da el primer paso hacia tus metas con seguridad y confianza!" },
+        ]
+    }
+};
+
+export default defineComponent({
     data() {
         return {
             isOpen: false,
@@ -98,7 +218,7 @@ export default {
         },
         startCloseTimerSearch() {
             this.closeTimer = setTimeout(() => {
-                this.toggleSearch();
+                this.showSearch = false;
             }, 120); // Espera 200ms antes de cerrar el menú
         },
         cancelCloseTimer() {
@@ -107,17 +227,49 @@ export default {
         toggleSearch() {
             this.showSearch = !this.showSearch;
         },
-        handleSearch() {
-            console.log("Search query:", this.searchQuery);
-            this.$emit("update:search", this.searchQuery);
-        },
-        onKeyPress(event: KeyboardEvent) {
-            if (event.key === "Enter") {
-                this.handleSearch();
-            }
-        },
+        search() {
+            if (!this.searchQuery.trim()) return;
+            let results: { ruta: string; h1: string; type: string; text: string }[] = [];
+            // Función para normalizar texto (quita acentos y convierte a minúsculas)
+            const normalizeText = (text: string) => 
+                text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            const normalizedQuery = normalizeText(this.searchQuery);
+            // Recorrer todas las rutas dentro del JSON
+            Object.entries(jsonData).forEach(([ruta, rutaData]) => {
+                // Obtener el H1 de la página
+                const h1Text = rutaData.titulos.h1?.texto || "Sin título";
+                // Buscar en títulos (h1, h2, h3, h4)
+                Object.entries(rutaData.titulos).forEach(([key, value]) => {
+                    if (Array.isArray(value)) {
+                        value.forEach((item) => {
+                            if (normalizeText(item.texto).includes(normalizedQuery)) {
+                                results.push({ ruta, h1: h1Text, type: key, text: item.texto });
+                            }
+                        });
+                    } else {
+                        if (normalizeText(value.texto).includes(normalizedQuery)) {
+                            results.push({ ruta, h1: h1Text, type: key, text: value.texto });
+                        }
+                    }
+                });
+                // Buscar en párrafos
+                rutaData.parrafos.forEach((item) => {
+                    if (normalizeText(item.texto).includes(normalizedQuery)) {
+                        results.push({ ruta, h1: h1Text, type: "párrafo", text: item.texto });
+                    }
+                });
+            });
+            // Redirigir a la página de catálogo con los resultados
+            this.$router.push({
+                name: "catalogo",
+                query: {
+                    q: this.searchQuery,
+                    results: JSON.stringify(results)
+                }
+            });
+        }
     }
-}
+});
 </script>
 
 <style scoped>
