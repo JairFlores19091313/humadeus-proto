@@ -40,6 +40,12 @@ const routes: RouteRecordRaw[] = [
             //requireAuth: false
         },
     },
+    { path: '/catalogo', component: () => import('./pages/Catalogo.vue'), name: 'catalogo',
+        meta: {
+            title: "Busqueda | Humadeus",
+            //requireAuth: false
+        },
+    },
 ]
 
 const router = createRouter({

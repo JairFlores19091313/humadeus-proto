@@ -17,7 +17,7 @@
                             <a href="https://www.linkedin.com/school/universidad-humanitas/mycompany/" target="_blank"><img src="../pages/images/iconos-linkedin-sociales-humadeus.png" alt="" class="lg:w-6 lg:h-6 w-4 h-4"></a>
                         </div>
                     </div>
-                    <div class="lg:flex justify-between relative items-center lg:space-x-8">
+                    <div class="lg:flex justify-between relative items-center lg:space-x-24">
                         <!-- nosotros -->
                         <div class="relative items-center flex justify-between">
                             <router-link to="/nosotros">
@@ -48,12 +48,12 @@
                             </router-link>
                         </div>
                         <!-- Solicita tu credito -->
-                        <div class="relative flex justify-between">
+                        <!-- <div class="relative flex justify-between">
                             <router-link to="/solicita-tu-credito">
                                 <button class="custom-ring inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Solicita tu crédito
                                 </button>
                             </router-link>
-                        </div>
+                        </div> -->
                         <div class="relative" @mouseleave="startCloseTimerSearch">
                             <img src="../pages/images/lupa.png" class="w-8 cursor-pointer" @click="toggleSearch">
                             <input

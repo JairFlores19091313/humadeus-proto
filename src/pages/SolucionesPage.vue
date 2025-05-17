@@ -6,10 +6,10 @@
             </div>
             <div class="flex flex-col bg-[#e1e2e0] justify-start items-center  w-screen">
                 <div class="flex flex-col max-w-[1200px] justify-start  w-full">
-                    <div class="text-justify lg:mx-0 mx-4 my-12">
+                    <div class="text-justify lg:mx-0 mx-8 my-12">
                         <p>En Humadeus, trabajamos contigo para facilitar tu camino hacia el éxito académico. Ofrecemos <span class="font-bold">opciones</span> de financiamiento educativo diseñadas a la medida, pensando en tus objetivos y en el bienestar de tu familia. Nuestro compromiso es brindarte <span class="font-bold">soluciones</span> flexibles y accesibles, conoce nuestras alternativas.</p>
                     </div>
-                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 lg:mx-0 mx-4 w-ful h-full mb-16">
+                    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 lg:mx-0 mx-8 w-ful h-full mb-16">
                         <div class="flex flex-col content-between bg-white border border-gray-400 w-full">
                             <div class="flex flex-col pt-4 items-center w-full">
                                 <p class="text-hgreen font-bold text-center p-2 px-3 ">Créditos para<br> Colegiaturas Universitarias</p>
@@ -125,7 +125,7 @@
             </div>
         </div>
         <div class="flex flex-col border border-hgreen max-w-[1200px] w-full mb-16">
-            <div class="mx-auto md:p-12 p-4 w-full">
+            <div class=" md:p-12 p-8 w-full">
                 <h2 class="text-lg text-left text-hgreen mb-6">¿Tienes alguna <span class="font-bold">pregunta?</span></h2>
                 <p class="text-gray-600 text-left text mb-6">
                 Te brindamos asesoría personalizada para que tomes <br>la decisión que mejor se adapte a tus necesidades.

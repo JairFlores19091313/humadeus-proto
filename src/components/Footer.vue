@@ -1,5 +1,34 @@
 <template>
     <div class="flex flex-col items-center justify-center  w-screen bg-hgreen">
+        <div class="flex flex-col items-center w-full bg-hfondogreen">
+            <div class="flex flex-col items-center my-12 max-w-[1000px] lg:px-0 px-8 ">
+                <div class="mb-8 flex justify-between items-center w-full lg:space-x-36 space-x-16 max-w-[800px]">
+                    <a href="www.cnbv.gob.mx" target="_blank" class="w-1/3">
+                        <img src="../pages/images/logo-cnvb-1-1536x632.png" class="">
+                    </a>
+                    <a href="www.cnbv.gob.mx" target="_blank" class="w-1/3">
+                        <img src="../pages/images/Condusef-transparente.webp" class="">
+                    </a>
+                    <a href="www.cnbv.gob.mx" target="_blank" class="w-[150px]">
+                        <img src="../pages/images/buro-logo-1.jpg" class="w-[150px]">
+                    </a>
+                </div>
+                <div class="text-justify w-full">
+                    <p class="mb-6">1.- Se informa que HUMADEUS, SA de C.V. SOFOM, E.N.R. es una Sociedad Financiera de Objeto Múltiple, Entidad no Regulada, que, para su constitución y operación con tal carácter, no requiere de autorización de la Secretaría de Hacienda y Crédito Público, no obstante, se encuentra sujeta a la supervisión de la Comisión Nacional Bancaria y de Valores, únicamente para efectos de lo dispuesto por el artículo 56 de la Ley General de Organizaciones y Actividades Auxiliares del Crédito.</p>
+                    <p class="mb-6">2.- Por otra parte, se comunica que en determinados conceptos esta supervisada por la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF).</p>
+                    <p class="mb-6">3.- Se informa que la comisión que se establece está debidamente registrada ante el Registro de Comisiones (RECO), de la CONDUSEF. </p>
+                    <p class="mb-6">4.- Dudas, aclaraciones y reclamaciones: UNIDAD ESPECIALIZADA DE ATENCION A USUARIOS DE SERVICIOS FINANCIEROS DE HUMADEUS
+Unidad Especializada de Atención a Usuarios (UNE) HUMADEUS, S.A. de C.V., SOFOM, E.N.R. Titular de la UNE: _________________
+CALLE SACRAMENTO 406, INT. 1A, COLONIA INSURGENTES SAN BORJA C.P. 03100 ALCALDÍA/MUNICIPIO: BENITO JUAREZ, ENTIDAD FEDERATIVA: CIUDAD DE MÉXICO, 
+CORREO(S) ELECTRÓNICO(S) __________Y TELÉFONO(S)__________ DEL TITULAR DE LA UNE. 
+HORARIO PRESENCIAL: LUNES a VIERNES: 10:00 - 17:00 Horas;
+MEDIOS DE RECEPCIÓN: Sucursales; UNE
+NIVELES DE ATENCIÓN: UNE
+MEDIOS DE COMUNICACIÓN ELECTRÓNICA: Sin medios de comunicación electrónica o digital:
+El plazo de respuesta a las consultas o reclamaciones no será mayor a 30 días hábiles, en cumplimiento al artículo 50 Bis de la Ley de Protección y Defensa al Usuario de Servicios Financieros. En el caso de las aclaraciones el plazo no será mayor a 45 días naturales, en cumplimiento del artículo 23 de la Ley para la Transparencia y Ordenamiento de los Servicios Financieros. </p>
+                </div>
+            </div>
+        </div>
         <div class="flex flex-col items-center justify-center relative lg:max-w-[1200px] w-full">
             <div class="lg:flex lg:gap-16 md:gap-12 gap-8 md:pl-4 items-start justify-start md:pt-8 pt-4 w-full grid grid-cols-3">
                 <div class="text-left justify-start text-hcream flex flex-col">
