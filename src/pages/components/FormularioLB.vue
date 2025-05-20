@@ -3,7 +3,7 @@ import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default defineComponent({
   setup() {
-    const lightboxOpen = ref(true);
+    const lightboxOpen = ref(false);
 
     const ladas = [
       { codigo: 'mx', lada: '+52', nombre: 'México' },
