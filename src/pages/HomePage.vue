@@ -6,91 +6,94 @@
                 <div class="flex w-full justify-start  max-w-[1200px]">
                     <div class="max-w-[1200px] mx-auto w-full bg-[#e1e2e0] p-8 rounded-none">
                         <div class="lg:flex justify-between w-full">
-                        <!-- Sección de simulador -->
-                        <div class="mr-8 w-full">
-                            <div class="w-[80%] relative">
-                                <div class="flex justify-between mb-2">
-                                    <p class="text-left">1. ¿Cuánto dinero necesitas?</p>
+                            <!-- Sección de simulador -->
+                            <div class="mr-8 w-full">
+                                <div class="w-[80%] relative">
+                                    <div class="flex justify-between mb-2">
+                                        <p class="text-left">1. ¿Cuánto dinero necesitas?</p>
+                                    </div>
+                                    <div class="flex justify-between mb-8">
+                                        <span
+                                            class="font-semibold text-gray-600 absolute transition-transform duration-200"
+                                            :style="{ left: labelPosition + 'px', transform: 'translateX(-50%)' }"
+                                        >
+                                            ${{ amount.toLocaleString() }}
+                                        </span>
+                                    </div>
+                                    <div class="w-full flex flex-col justify-start">
+                                        <input
+                                            type="range"
+                                            v-model="amount"
+                                            min="10000"
+                                            max="100000"
+                                            step="5000"
+                                            class="w-full my-3 appearance-none accent-hgreen bg-white h-[6px]"
+                                            ref="slider"
+                                            @input="updateLabelPosition"
+                                        />
+                                        <div class="flex justify-between text-sm text-gray-600">
+                                            <span>$10,000</span>
+                                            <span>$100,000</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex justify-between mb-8">
-                                    <span
-                                        class="font-semibold text-gray-600 absolute transition-transform duration-200"
-                                        :style="{ left: labelPosition + 'px', transform: 'translateX(-50%)' }"
+                                <p class=" mt-8 text-left">2. ¿En qué plazo deseas liquidar tu crédito? (meses).</p>
+                                <div class="flex md:gap-8 gap-6 items-center mt-3">
+                                    <button
+                                        v-for="term in terms"
+                                        :key="term"
+                                        @click="selectedTerm = term"
+                                        :class="[
+                                        'w-12 h-12 rounded-full flex items-center justify-center text-sm border transition',
+                                        selectedTerm === term ? 'bg-gray-400 text-white border-hgreen' : 'bg-transparent text-hgreen border-hgreen'
+                                        ]"
                                     >
-                                        ${{ amount.toLocaleString() }}
-                                    </span>
+                                        {{ term }}
+                                    </button>
                                 </div>
-                                <div class="w-full flex flex-col justify-start">
-                                <input
-                                    type="range"
-                                    v-model="amount"
-                                    min="10000"
-                                    max="100000"
-                                    step="1000"
-                                    class="w-full my-3 appearance-none accent-hgreen bg-white h-[6px]"
-                                    ref="slider"
-                                    @input="updateLabelPosition"
-                                />
-                                <div class="flex justify-between text-sm text-gray-600">
-                                    <span>$10,000</span>
-                                    <span>$100,000</span>
+                                <p class=" mt-8 mb-6 text-center">*La presente información es únicamente para efectos ilustrativos, no representa ningún ofrecimiento formal por parte de Humadeus.</p>
+                                <p class="font-semibold">Tasa de interés 21%, CAT:23.1%</p>
+                            </div>
+                            <div class="w-full flex flex-col items-center justify-center">
+                                <!-- Resultados -->
+                                <div class="bg-white p-4 px-8 shadow w-full text-left mb-6">
+                                    <p class="font-bold px-1 text-hgreen" ><span class="font-bold" >Préstamo por ${{ amount.toLocaleString() }} a  <span style="font-weight:900">{{ selectedTerm }} meses.</span></span></p>
+                                    <div class=" pt-2 text-gray-700">
+                                        <p class="flex px-1 justify-between">
+                                            <span>Total de pagos</span> 
+                                            <span>{{ selectedTerm }} mensuales</span>
+                                        </p>
+                                        <hr class="my-4 border-gray-400">
+                                        <p class="flex px-1 justify-between">
+                                            <span>Préstamo</span> 
+                                            <span>${{ amount.toLocaleString() }}</span>
+                                        </p>
+                                        <hr class="my-4 border-gray-400">
+                                        <p class="flex justify-between">
+                                            <span>Intereses</span> 
+                                            <span>${{ interest.toLocaleString() }}</span>
+                                        </p>
+                                        <hr class="my-4 border-gray-400">
+                                        <p class="flex px-1 justify-between">
+                                            <span>Pago mensual</span> 
+                                            <span>${{ monthlyPayment.toLocaleString() }}</span>
+                                        </p>
+                                        <hr class="my-4 border-gray-400">
+                                        <p class="flex px-1 justify-between font-semibold text-hgreen">
+                                            <span>Total a pagar:</span> 
+                                            <span>${{ totalToPay.toLocaleString() }}</span>
+                                        </p>
+                                    </div>
                                 </div>
-                                </div>
+                                <!-- <button @click.prevent="" class="rounded-none font-serif transition duration-300 ease-in-out hover:border-hgreen hover:bg-white hover:text-hgreen flex items-center justify-center text-white bg-hgreen  h-[35px]">Imprimir tabla de amortización</button> -->
+                                <FormularioLB />
                             </div>
-                            <p class=" mt-8 text-left">2. ¿En qué plazo deseas liquidar tu crédito? (meses).</p>
-                            <div class="flex md:gap-8 gap-6 items-center mt-3">
-                                <button
-                                    v-for="term in terms"
-                                    :key="term"
-                                    @click="selectedTerm = term"
-                                    :class="[
-                                    'rounded-full w-2 flex items-center justify-center text-center text-sm',
-                                    selectedTerm === term ? 'bg-white text-hgreen' : ' bg-hgreen text-white'
-                                    ]"
-                                >
-                                    {{ term }}
-                                </button>
-                            </div>
-                            <p class=" mt-8 text-left">¡Para un resultado más preciso comunícate
-                                con nosotros!</p>
-                        </div>
-
-                        <!-- Resultados -->
-                        <div class="bg-white p-4 px-8 shadow w-[80%] text-left">
-                            <p class="font-bold px-1 text-hgreen" ><span class="font-bold" >Préstamo por ${{ amount.toLocaleString() }} a  <span style="font-weight:900">{{ selectedTerm }} meses.</span></span></p>
-                            <div class=" pt-2 text-gray-700">
-                                <p class="flex px-1 justify-between">
-                                    <span>Total de pagos</span> 
-                                    <span>{{ selectedTerm }} mensuales</span>
-                                </p>
-                                <hr class="my-4 border-gray-400">
-                                <p class="flex px-1 justify-between">
-                                    <span>Préstamo</span> 
-                                    <span>${{ amount.toLocaleString() }}</span>
-                                </p>
-                                <hr class="my-4 border-gray-400">
-                                <p class="flex justify-between">
-                                    <span>Intereses</span> 
-                                    <span>${{ interest.toLocaleString() }}</span>
-                                </p>
-                                <hr class="my-4 border-gray-400">
-                                <p class="flex px-1 justify-between">
-                                    <span>Pago mensual</span> 
-                                    <span>${{ monthlyPayment.toLocaleString() }}</span>
-                                </p>
-                                <hr class="my-4 border-gray-400">
-                                <p class="flex px-1 justify-between font-semibold text-hgreen">
-                                    <span>Total a pagar:</span> 
-                                    <span>${{ totalToPay.toLocaleString() }}</span>
-                                </p>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Formulario -->
-            <div class="flex flex-col p-6 lg:w-[34%] items-center justify-center bg-[white] border border-black">
+            <div class="flex-col p-6 lg:w-[34%] items-center justify-center bg-[white] border border-black hidden">
                 <div class="flex flex-col w-full my-4 justify-center">
                     <p class="text-hgreen font-serif lg:text-[17px] mb-2 leading-tight">Continúa estudiando de la mano<br> de <b class="font-bold">Humadeus</b></p>
                     <p class="text-hgreen px-3 text-[16px] leading-tight mb-5">¡Pregúntanos cómo!</p>
@@ -307,10 +310,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import PreguntasCarrusel from "./components/PreguntasCarrusel.vue";
+import FormularioLB from "./components/FormularioLB.vue";
 
 export default defineComponent({
     components: {
-        PreguntasCarrusel, 
+        PreguntasCarrusel, FormularioLB
     },
     data() {
         return {

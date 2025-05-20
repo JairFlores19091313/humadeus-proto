@@ -28,18 +28,24 @@ const routes: RouteRecordRaw[] = [
             //requireAuth: false
         },
     },
+    { path: '/soluciones/creditos-escolarizados', component: () => import('./pages/SolucionesPages/SolEscolarizado.vue'), name: 'soluciones',
+        meta: {
+            title: "Créditos Escolarizados | Humadeus",
+            //requireAuth: false
+        },
+    },
     { path: '/contactanos', component: () => import('./pages/ContactoPage.vue'), name: 'Contactanos',
         meta: {
             title: "Contactanos | Humadeus",
             //requireAuth: false
         },
     },
-    { path: '/solicita-tu-credito', component: () => import('./pages/SolCredPage.vue'), name: 'Solicita tu credito',
-        meta: {
-            title: "Solicita tu crédito | Humadeus",
-            //requireAuth: false
-        },
-    },
+    // { path: '/solicita-tu-credito', component: () => import('./pages/SolCredPage.vue'), name: 'Solicita tu credito',
+    //     meta: {
+    //         title: "Solicita tu crédito | Humadeus",
+    //         //requireAuth: false
+    //     },
+    // },
     { path: '/catalogo', component: () => import('./pages/Catalogo.vue'), name: 'catalogo',
         meta: {
             title: "Busqueda | Humadeus",

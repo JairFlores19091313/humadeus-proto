@@ -2,15 +2,19 @@
     <div class="flex flex-col items-center justify-center  w-screen bg-hgreen">
         <div class="flex flex-col items-center w-full bg-hfondogreen">
             <div class="flex flex-col items-center my-12 max-w-[1000px] lg:px-0 px-8 ">
-                <div class="mb-8 flex justify-between items-center w-full lg:space-x-36 space-x-16 max-w-[800px]">
-                    <a href="www.cnbv.gob.mx" target="_blank" class="w-1/3">
-                        <img src="../pages/images/logo-cnvb-1-1536x632.png" class="">
+                <div class="mb-8 flex justify-between items-center w-full max-w-[800px] 
+            space-x-10 md:space-x-20 lg:space-x-24">
+                    <a href="https://www.cnbv.gob.mx" target="_blank" class="flex-1 flex justify-center">
+                        <img src="../pages/images/logo-cnvb-1-1536x632.png" 
+                            class="max-h-[80px] object-contain" alt="CNBV">
                     </a>
-                    <a href="www.cnbv.gob.mx" target="_blank" class="w-1/3">
-                        <img src="../pages/images/Condusef-transparente.webp" class="">
+                    <a href="https://www.cnbv.gob.mx" target="_blank" class="flex-1 flex justify-center">
+                        <img src="../pages/images/Condusef-transparente.webp" 
+                            class="max-h-[80px] object-contain" alt="Condusef">
                     </a>
-                    <a href="www.cnbv.gob.mx" target="_blank" class="w-[150px]">
-                        <img src="../pages/images/buro-logo-1.jpg" class="w-[150px]">
+                    <a href="https://www.cnbv.gob.mx" target="_blank" class="flex-1 flex justify-center">
+                        <img src="../pages/images/buro-logo-1.jpg" 
+                            class="max-h-[100px] object-contain" alt="Buró de Crédito">
                     </a>
                 </div>
                 <div class="text-justify w-full">
