@@ -105,16 +105,16 @@ export default defineComponent({
                             <input
                                 type="text"
                                 placeholder=""
-                                class="w-full bg-transparent focus:outline-none text-center border-gray-400 focus:border-hgreen border-t-0 border-x-0 border-b py-2 text-gray-700 focus:ring-0"
+                                class="w-full bg-transparent focus:outline-none text-center mb-1 border-gray-400 focus:border-hgreen border-t-0 border-x-0 border-b py-2 text-gray-700 focus:ring-0"
                             />
-                            <label>Nombre(s)</label>
+                            <label class="mt-2">Nombre(s)</label>
                         </div>
                         <div class="relative w-full">
                             <input
                                 type="text"
-                                class="w-full bg-transparent focus:outline-none lg:mt-0 mt-2 text-center border-t-0 border-x-0 border-b border-gray-400 focus:border-hgreen py-2 text-gray-700 focus:ring-0"
+                                class="w-full bg-transparent focus:outline-none lg:mt-0 mt-2 text-center border-t-0 mb-1 border-x-0 border-b border-gray-400 focus:border-hgreen py-2 text-gray-700 focus:ring-0"
                             />
-                            <label>Apellido(s)</label>
+                            <label class="mt-2">Apellido(s)</label>
                         </div>
                     </div>
                     <div class="lg:flex gap-12 justify-between w-full">
@@ -122,13 +122,13 @@ export default defineComponent({
                             <input
                                 type="text"
                                 placeholder=""
-                                class="w-full bg-transparent focus:outline-none text-center border-t-0 border-x-0 border-gray-400 focus:border-hgreen border-b py-2 text-gray-700 focus:ring-0"
+                                class="w-full bg-transparent focus:outline-none mb-1 text-center border-t-0 border-x-0 border-gray-400 focus:border-hgreen border-b py-2 text-gray-700 focus:ring-0"
                             />
-                            <label>Correo electrónico</label>
+                            <label class="mt-2">Correo electrónico</label>
                         </div>
                         <div class="relative w-full">
                             <div>
-                                <div class="flex lg:mt-0 mt-2">
+                                <div class="flex lg:mt-0 mt-2 mb-1">
                                     <select
                                         v-model="selectedLada"
                                         class="w-[40%] bg-transparent focus:outline-none text-center border-b border-t-0 border-x-0 focus:border-hgreen border-gray-400 py-2 text-gray-700 focus:ring-0"
@@ -149,20 +149,20 @@ export default defineComponent({
                                         required
                                     />
                                 </div>
-                                <label>Teléfono</label>
+                                <label class="mt-2">Teléfono</label>
                             </div>
                         </div>
                     </div>
                     <div class="lg:flex gap-12 justify-between w-full">
                         <div class="relative items-center w-full">
-                            <select class="w-full bg-white text-center border-gray-400  border-b border-t-0 border-x-0 rounded-none focus:ring-0 focus:border-hgreen">
+                            <select class="w-full bg-white text-center border-gray-400  border-b border-t-0 border-x-0 rounded-none mb-1 focus:ring-0 focus:border-hgreen">
                                 <option value="">Selecciona una opción</option>
                                 <option value="licenciatura">Licenciatura</option>
                                 <option value="maestria">Maestría</option>
                                 <option value="doctorado">Doctorado</option>
                                 <option value="otros">Otros</option>
                             </select>
-                            <label class=" leading-none">Nivel académico para el que<br>se requiere el crédito</label>
+                            <label class="mt-2">Nivel académico para el que<br>se requiere el crédito</label>
                         </div>
                         <div class="relative w-full">
                         </div>

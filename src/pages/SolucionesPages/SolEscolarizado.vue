@@ -13,7 +13,7 @@
                 </div>
                 <div class="p-4 border border-hgreen w-full max-w-[560px]">
                     <h2 class="text-2xl text-left text-hgreen mb-[24px] font-serif">Documentación</h2>
-                    <ul class="list-disc pl-5 lg:text-justify hyphens-auto">
+                    <ul class="list-disc pl-5 lg:text-justify hyphens-auto space-y-2">
                         <li>Identificación Oficial Vigente (INE, Pasaporte, Licencia, Cédula Profesional).</li>
                         <li>Comprobante de domicilio (agua, luz, gas, internet).</li>
                         <li>Estados de cuenta bancarios de los últimos 2 meses y/o recibo de nómina últimos 3 meses y/o Declaración anual del último ejercicio.</li>
@@ -25,7 +25,7 @@
             <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 max-w-[1200px] w-full lg:mx-0 mx-4 mb-16">
                 <div class="p-4 border border-hgreen w-full max-w-[560px]">
                     <h2 class="text-2xl text-left text-hgreen mb-[24px] font-serif">Requisitos y Condiciones de Contratación</h2>
-                    <ul class="list-disc pl-5 lg:text-justify hyphens-auto">
+                    <ul class="list-disc pl-5 lg:text-justify hyphens-auto space-y-2">
                         <li>Crédito en pesos mexicanos.</li>
                         <li>Tasa fija durante la vigencia del crédito.</li>
                         <li>Desembolsos fijos, mínimos de 20 años.</li>
