@@ -34,7 +34,7 @@
                         <li>Aval u Obligado Solidario con buen historial crediticio.</li>
                     </ul>
                 </div>
-                <img src="../images/manos-equipo-humadeus.webp" class="max-w-[560px]">
+                <img src="../images/credito-escolarizado.webp" class="max-w-[560px]">
             </div>
             <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 max-w-[1200px] w-full lg:mx-0 mx-4 mb-16">
                 <div class="text-justify lg:mx-0 mx-4 py-4 w-full">
