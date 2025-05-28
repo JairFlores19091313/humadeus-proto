@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:mx-0 mx-4 space-y-3 flex flex-col w-full">
+    <div class="lg:mx-0 mx-4 space-y-3 flex flex-col w-full lg:px-0 px-8">
         <!-- Contenedor del carrusel -->
         <div class="lg:flex gap-8 justify-between lg:items-start items-center w-full">
             <div class="w-full space-y-3 h-full">

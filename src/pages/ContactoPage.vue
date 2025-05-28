@@ -1,11 +1,11 @@
 <template>
     <div class="flex flex-col items-center justify-center  mt-[180px] w-full">
-        <div class="max-w-[1200px] w-full lg:mx-0 mx-4 mb-2">
+        <div class="max-w-[1200px] w-full lg:px-0 px-8 mb-2">
             <h2 class="text-2xl text-hgreen text-left mb-4 font-serif">El futuro está <span class="font-semibold">en tus manos</span></h2>
             <p class="text-justify">Impulsa tus sueños hoy, invierte en tu educación y construye el mañana que deseas con las oportunidades que te acercan a un mejor futuro.</p>
         </div>
         <div class="flex flex-col bg-[#e1e2e0] justify-start items-center mb-16  w-screen">
-            <div class="max-w-[1200px] w-full lg:mx-0 mx-4 mt-6">
+            <div class="max-w-[1200px] w-full lg:px-0 px-8 mt-6">
                 <form class="bg-white border border-hgreen max-w-[1000px] w-full rounded-none mb-8 mt-6 space-y-6">
                 <p class="text-justify md:mx-16 mx-8 mt-12">Deja tus datos y nos comunicaremos contigo para ofrecerte una solución financiera personalizada que se ajuste a tus necesidades.</p>
                 <div class="flex flex-col md:mx-16 mx-8">
@@ -96,7 +96,7 @@
             </div>
             
         </div>
-        <div class="flex items-center max-w-[1200px] gap-16 justify-between w-full lg:mx-0 mx-4 mb-16">
+        <div class="lg:flex items-center max-w-[1200px] gap-16 justify-between w-full lg:px-0 px-8 mb-16">
             <div class="flex flex-col space-y-4">
                 <div class="flex flex-col text-left space-y-1">
                     <p class="font-semibold">Teléfonos</p>
@@ -131,7 +131,7 @@
                     <p>9:00 – 21:00</p>
                 </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7527.363689834298!2d-99.17401!3d19.382924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff9dc32ce0d7%3A0x216900317611cc6c!2sUniversidad%20Humanitas!5e0!3m2!1ses-419!2sus!4v1738790199632!5m2!1ses-419!2sus" width="800" height="600" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7527.363689834298!2d-99.17401!3d19.382924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff9dc32ce0d7%3A0x216900317611cc6c!2sUniversidad%20Humanitas!5e0!3m2!1ses-419!2sus!4v1738790199632!5m2!1ses-419!2sus" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="lg:w-[800px] lg:h-[600px] md:w-[600px] md:h-[450px] w-[400px] h-[300px]"></iframe>
         </div>
     </div>
 </template>

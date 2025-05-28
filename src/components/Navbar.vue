@@ -21,14 +21,14 @@
                         <!-- nosotros -->
                         <div class="relative items-center flex justify-between">
                             <router-link to="/nosotros">
-                                <button class="custom-ring inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none  ">Nosotros
+                                <button class="custom-ring inline-flex lg:text-[18px] font-normal text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none  ">Nosotros
                                 </button>
                             </router-link>
                         </div>
                         <!-- Soluciones -->
                         <div class="relative flex justify-between custom-ring" @mouseover="openDropdown" @mouseleave="startCloseTimer">
                             <router-link to="/soluciones">
-                                <button  class=" inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Soluciones
+                                <button  class=" inline-flex lg:text-[18px] text-[16px] items-center rounded-none font-normal px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Soluciones
                                     <svg class="-mr-1 ml-2 h-6 w-6 text-hcream" xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd" d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 12z" clip-rule="evenodd" />
                                     </svg>
@@ -44,7 +44,7 @@
                         <!-- Contactanos -->
                         <div class="relative flex justify-between">
                             <router-link to="/contactanos">
-                                <button class="custom-ring inline-flex lg:text-[18px] text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Contáctanos
+                                <button class="custom-ring inline-flex lg:text-[18px] font-normal text-[16px] items-center rounded-none  px-2 py-1 border border-transparent text-white bg-transparent focus:outline-none">Contáctanos
                                 </button>
                             </router-link>
                         </div>

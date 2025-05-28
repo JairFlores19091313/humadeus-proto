@@ -4,16 +4,16 @@
 <template>
     <div class="flex flex-col items-center justify-center w-full mt-[220px]">
         <div class="flex flex-col w-full">
-            <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 max-w-[1200px] w-full lg:mx-0 mx-4 mb-16">
-                <div class="text-justify lg:mx-0 mx-4 py-4 w-full max-w-[560px]">
+            <div class="flex lg:flex-row flex-col lg:justify-between lg:gap-16 gap-6 max-w-[1200px] w-full lg:px-0 px-8 mb-16">
+                <div class="text-justify w-full lg:max-w-[560px]">
                     <h2 class="text-2xl text-hgreen mb-[24px] font-serif">Crédito <span class="font-semibold">Escolarizado</span></h2>
-                    <p class=" text-justify mb-4">
+                    <p class=" text-justify mb-4 lg:hyphens-manual hyphens-auto">
                         Texto comercial para venta del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
                     </p>
                 </div>
-                <div class="p-4 border border-hgreen w-full max-w-[560px]">
+                <div class="p-4 border border-hgreen w-full lg:max-w-[560px]">
                     <h2 class="text-2xl text-left text-hgreen mb-[24px] font-serif">Documentación</h2>
-                    <ul class="list-disc pl-5 lg:text-justify hyphens-auto space-y-2">
+                    <ul class="list-disc pl-5 lg:text-justify text-left hyphens-auto space-y-2">
                         <li>Identificación Oficial Vigente (INE, Pasaporte, Licencia, Cédula Profesional).</li>
                         <li>Comprobante de domicilio (agua, luz, gas, internet).</li>
                         <li>Estados de cuenta bancarios de los últimos 2 meses y/o recibo de nómina últimos 3 meses y/o Declaración anual del último ejercicio.</li>
@@ -22,10 +22,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 max-w-[1200px] w-full lg:mx-0 mx-4 mb-16">
-                <div class="p-4 border border-hgreen w-full max-w-[560px]">
+            <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 max-w-[1200px] w-full lg:px-0 px-8 mb-16">
+                <div class="p-4 border border-hgreen w-full lg:max-w-[560px]">
                     <h2 class="text-2xl text-left text-hgreen mb-[24px] font-serif">Requisitos y Condiciones de Contratación</h2>
-                    <ul class="list-disc pl-5 lg:text-justify hyphens-auto space-y-2">
+                    <ul class="list-disc pl-5 lg:text-justify text-left hyphens-auto space-y-2">
                         <li>Crédito en pesos mexicanos.</li>
                         <li>Tasa fija durante la vigencia del crédito.</li>
                         <li>Desembolsos fijos, mínimos de 20 años.</li>
@@ -34,10 +34,10 @@
                         <li>Aval u Obligado Solidario con buen historial crediticio.</li>
                     </ul>
                 </div>
-                <img src="../images/credito-escolarizado.webp" class="max-w-[560px]">
+                <img src="../images/credito-escolarizado.webp" class="lg:max-w-[560px] w-fit">
             </div>
-            <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 max-w-[1200px] w-full lg:mx-0 mx-4 mb-16">
-                <div class="text-justify lg:mx-0 mx-4 py-4 w-full">
+            <div class="flex lg:flex-row flex-col justify-between lg:gap-16 gap-12 lg:max-w-[1200px] w-full lg:px-0 px-8 mb-16">
+                <div class="text-justify py-4 w-full lg:hyphens-manual hyphens-auto">
                     <h2 class="text-2xl text-hgreen text-center mb-[24px] font-serif">Comisiones y avisos</h2>
                     <p class=" text-justify mb-4">
                         EL crédito Escolarizado de HUMADEUS, S.A. DE C.V. SOFOM E.N.R., va adicionado con una comisión por apertura de crédito que se cobra al inicio de la relación comercial, misma que puede variar del 0% al 3%, dependiendo de las promociones existentes al momento de contratar.

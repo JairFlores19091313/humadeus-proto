@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-col items-center justify-center w-full mt-[220px]">
+    <div class="flex flex-col items-center justify-center w-full mt-[220px] lg:hypens-none hyphens-auto">
         <div id="beneficios" class="lg:flex max-w-[1200px] lg:justify-between justify-center items-end  gap-24 w-full mb-20">
             <div class="lg:pl-16 flex flex-col items-center">
-                <p class="text-9xl lg:text-left text-center w-[324px] font-baskerville text-hgreen"><span class="text-7xl font-semibold">+</span>{{ alumnosBeneficiados.toLocaleString('es-MX') }}</p>
-                <p class="lg:text-right text-xl font-serif">Jóvenes beneficiados</p>
+                <p class="lg:text-9xl text-8xl lg:text-left text-center w-[324px] font-baskerville text-hgreen"><span class="text-7xl font-semibold">+</span>{{ alumnosBeneficiados.toLocaleString('es-MX') }}</p>
+                <p class="lg:text-right text-xl font-serif lg:mb-0 mb-8">Jóvenes beneficiados</p>
             </div>
-            <div class="text-justify lg:mx-0 mx-4">
+            <div class="text-justify lg:px-0 px-8">
                 <h2 class="text-2xl text-hgreen mb-[24px] font-serif">Qué es <span class="font-semibold">Humadeus</span></h2>
                 <p class=" text-justify mb-4">
                     Somos una institución financiera <span class="font-semibold">mexicana</span> enfocada en brindar <span class="font-semibold">soluciones</span> accesibles y personalizadas para apoyar a jóvenes en su camino <span class="font-semibold">académico</span>.
@@ -15,8 +15,8 @@
                 </p>
             </div>
         </div>
-        <div class="max-w-[1200px] w-full mx-auto mb-16">
-            <div class="grid px-2 md:grid-cols-[auto_auto_auto] gx:grid-rows-5 gx:grid-cols-[auto_auto_auto_auto_auto] text-left gap-y-12 md:gap-x-4 gx:gap-6 relative z-10 w-full gx:h-[600px] bg-white">
+        <div class="max-w-[1200px] w-full lg:px-0 px-8 mb-16">
+            <div class="grid lg:px-2 md:grid-cols-[auto_auto_auto] gx:grid-rows-5 gx:grid-cols-[auto_auto_auto_auto_auto] text-left gap-y-12 md:gap-x-4 gx:gap-6 relative z-10 w-full gx:h-[600px] bg-white">
                 <div class="order-1 w-full space-y-6 gx:px-2 gx:row-span-2">
                     <h2 class="text-2xl text-hgreen font-serif">Nuestra <span class="font-semibold">Misión</span></h2>
                     <p class=" text-justify">
@@ -98,14 +98,14 @@
         <div class="max-w-[1200px] w-full mx-auto mb-16">
             <div class="lg:flex justify-center  items-start lg:gap-16 w-full mb-16">
                 <div class="flex flex-col justify-center text-justify lg:mb-0 mb-8">
-                    <h2 class="text-2xl lg:mx-0 mx-4 text-hgreen mb-[24px] text-left font-serif">Un <span class="font-semibold">compromiso</span> con la sociedad</h2>
-                    <p class="mb-4 lg:mx-0 mx-4"><span class="font-semibold text-left">Becas y Fondos de Apoyo:</span><br> Una parte de los beneficios de Humadeus será destinada a crear becas para estudiantes de bajos recursos, apoyando a los que más lo necesitan.</p>
-                    <p class="lg:mx-0 mx-4"><span class="font-semibold text-left">Programas de Educación Financiera:</span><br> Implementación de talleres y recursos que ayuden a los estudiantes a gestionar sus finanzas de manera efectiva, evitando problemas de endeudamiento en el futuro.</p>
+                    <h2 class="text-2xl lg:px-0 px-8 text-hgreen mb-[24px] text-left font-serif">Un <span class="font-semibold">compromiso</span> con la sociedad</h2>
+                    <p class="mb-4 lg:px-0 px-8"><span class="font-semibold text-left">Becas y Fondos de Apoyo:</span><br> Una parte de los beneficios de Humadeus será destinada a crear becas para estudiantes de bajos recursos, apoyando a los que más lo necesitan.</p>
+                    <p class="lg:px-0 px-8"><span class="font-semibold text-left">Programas de Educación Financiera:</span><br> Implementación de talleres y recursos que ayuden a los estudiantes a gestionar sus finanzas de manera efectiva, evitando problemas de endeudamiento en el futuro.</p>
                 </div>
                 <img src="../pages/images/manos-equipo-humadeus.webp" class="lg:w-[60%]">
             </div>
             <div class="lg:flex justify-center  items-start w-full">
-                <div class="flex flex-col lg:mx-0 mx-4 lg:mb-0 mb-8 justify-center text-justify lg:pr-16 lg:w-[50%]">
+                <div class="flex flex-col lg:px-0 px-8 lg:mb-0 mb-8 justify-center text-justify lg:pr-16 lg:w-[50%]">
                     <h2 class="text-2xl text-hgreen mb-[24px] text-left font-serif">Razones para <span class="font-semibold">elegirnos</span></h2>
                     <p class="mb-4"><span class="font-semibold">Respaldo y confianza:</span> Nuestra experiencia y transparencia nos convierten en una opción segura y reconocida en el mercado financiero.</p>
                     <p class="mb-4"><span class="font-semibold">Créditos personalizados:</span> Diseñamos soluciones hechas a la medida de tus necesidades y capacidades de pago.</p>
@@ -116,7 +116,7 @@
                     <p class="mb-4"><span class="font-semibold">Alcance internacional:</span> Podemos apoyarteb en cualquier parte del mundo.</p>
                     <p class="">Con Humadeus, estás en buenas manos. ¡Solicita tu crédito hoy y da el primer paso hacia tus metas con seguridad y confianza!</p>
                 </div>
-                <div class="flex flex-col lg:mx-0 mx-4 justify-center text-justify lg:w-[50%]">
+                <div class="flex flex-col lg:px-0 px-8 justify-center text-justify lg:w-[50%]">
                     <h2 class="text-2xl text-hgreen mb-[24px] text-left font-serif">Nuestras <span class="font-semibold">certificaciones</span> nos respaldan</h2>
                     <ul class="list-disc pl-5 space-y-4 text-left">
                         <li>Registro ante la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF)</li>

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center justify-center  w-screen bg-hgreen">
+    <div class="flex flex-col items-center justify-center  w-screen bg-hgreen ">
         <div class="flex flex-col items-center w-full bg-hfondogreen">
             <div class="flex flex-col items-center my-6 max-w-[1200px] lg:px-0 px-8 ">
                 <div class="mb-8 flex justify-between items-center w-full max-w-[1000px] 
@@ -33,8 +33,8 @@ El plazo de respuesta a las consultas o reclamaciones no será mayor a 30 días 
                 </div>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center relative lg:max-w-[1200px] w-full">
-            <div class="lg:flex lg:gap-16 md:gap-12 gap-8 md:pl-4 items-start justify-start md:pt-8 pt-4 w-full grid grid-cols-3">
+        <div class="flex flex-col items-center justify-center relative lg:max-w-[1200px] w-full lg:px-0 px-4">
+            <div class="lg:flex lg:gap-16 md:gap-12 gap-4 md:pl-4 items-start justify-start md:pt-8 pt-4 w-full grid grid-cols-3">
                 <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/" class="mb-2">INICIO</router-link>
                     <router-link to="/nosotros" class="mb-2">NOSOTROS</router-link>
@@ -63,24 +63,24 @@ El plazo de respuesta a las consultas o reclamaciones no será mayor a 30 días 
                     <p class="mb-2 text-[12px]">&nbsp;</p>
                     <a href="https://humanitas.edu.mx/aviso-de-privacidad" target="_blank" class="mb-2 text-[12px]">Política de privacidad</a>
                 </div>
-                <div class="text-left justify-start text-hcream flex flex-col">
+                <!-- <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/nosotros" class="mb-2">SOLICITA TU CRÉDITO</router-link>
                     <router-link to="/" class="mb-2 text-[12px]">Télefonos</router-link>
                     <router-link to="/" class="mb-2 text-[12px]">Dirección</router-link>
-                </div>
+                </div> -->
             </div>
             <div class="flex flex-col w-full relative -top-8">
-                <div class="flex justify-start items-end w-full gap-6">
+                <div class="flex lg:justify-start lg:items-end items-center justify-center w-full gap-6">
                     <div class="flex justify-start items-center w-full gap-6">
-                        <div class="w-full">
+                        <div class="w-full md:block hidden">
                             <div class="h-7 border-b-[1px] border-hcream">&nbsp;</div>
                             <div class="h-7">&nbsp;</div>
                         </div>
-                        <img src="../pages/images/El-futuro-en-tus-manos.png" class="w-[307px] h-[20px]">
+                        <img src="../pages/images/El-futuro-en-tus-manos.png" class="w-[307px] h-[20px] md:block hidden">
                     </div>
                     <img src="../pages/images/Logotipo-Humadeus-pie.png" class="w-[165px] relative -top-3">
                 </div>
-                <p class="pl-4 text-hcream text-left text-[12px]">© 2025 Humadeus. Todos los derechos reservados.</p>
+                <p class="pl-4 text-hcream lg:text-left text-center text-[12px]">© 2025 Humadeus. Todos los derechos reservados.</p>
             </div>
         </div>
     </div>
