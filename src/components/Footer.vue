@@ -34,7 +34,7 @@ El plazo de respuesta a las consultas o reclamaciones no será mayor a 30 días 
             </div>
         </div>
         <div class="flex flex-col items-center justify-center relative lg:max-w-[1200px] w-full lg:px-0 px-4">
-            <div class="lg:flex lg:gap-16 md:gap-12 gap-4 md:pl-4 items-start justify-start md:pt-8 pt-4 w-full grid grid-cols-3">
+            <div class="lg:flex lg:gap-16 md:gap-12 gap-4 md:pl-4 items-start justify-start md:pt-8 lg:mb-0 mb-12 pt-4 w-full grid grid-cols-3">
                 <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/" class="mb-2">INICIO</router-link>
                     <router-link to="/nosotros" class="mb-2">NOSOTROS</router-link>

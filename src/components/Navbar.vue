@@ -2,8 +2,11 @@
     <nav class="bg-hgreen lg:max-w-[1200px] z-[48]">
         <div class="fixed top-0 left-0 w-full bg-hgreen flex flex-col items-center min-h-[86px] font-thin justify-center shadow-md shadow-white z-[48]">
             <div class="flex justify-between items-center lg:max-w-[1200px] w-full py-2">
-                <router-link to="/"><img src="../pages/images/Logotipo-Humadeus.png" class="w-[165px]"></router-link>
-                <div class="flex flex-col items-center justify-center">
+                <router-link to="/">
+                    <img src="../pages/images/Logotipo-Humadeus.png" class="w-[165px] lg:mx-0 mx-2 lg:block hidden">
+                    <img src="../pages/images/Logotipo-Humadeus-pie.png" class="w-[165px] lg:mx-0 mx-2 lg:hidden">
+                </router-link>
+                <div class="flex-col items-center justify-center lg:block hidden">
                     <div class="flex justify-between items-center mb-4 w-full">
                         <img src="../pages/images/El-futuro-en-tus-manos.png" class="w-[307px] h-[20px] md:block hidden">
                         <a href="https://humanitas.edu.mx/usuarios" target="_blank" class="md:block hidden">
@@ -66,6 +69,54 @@
                                 class="absolute -right-32 top-0 w-48 px-4 py-2 focus:ring-0 focus:border-hgreen text-black transition-all rounded-none"
                             />
                         </div>
+                    </div>
+                </div>
+                <div class="lg:hidden select-none bg-transparent" style="font-family: 'Helvetica Neue Regular', sans-serif;">
+                    <button @click="toggleMenu" class=" focus:outline-none bg-transparent w-fit">
+                        <img v-if="!isMenuOpen" src="../pages/images/menu_icon.png" alt="Abrir menú" class="h-8 " />
+                        <img v-else src="../pages/images/menu_close_icon.png" alt="Cerrar menú" class="h-8 " />
+                    </button>
+
+                    <div id="menu" :class="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }" class="absolute bg-white right-0 mt-2 z-50 font-montse border border-hcream w-full">
+                        <ul class="flex flex-col divide-y divide-hcream text-black text-[16px]">
+
+                        <!-- Nosotros -->
+                        <li>
+                            <router-link to="/nosotros" class="block px-4 py-3 hover:bg-hgreen/20">Nosotros</router-link>
+                        </li>
+
+                        <!-- Soluciones con submenú -->
+                        <li>
+                            <span @click="isDropdownOpen = !isDropdownOpen" class="w-full text-center px-4 py-3 bg-transparent hover:bg-hgreen/20 flex justify-center items-center">
+                            Soluciones
+                            <svg class="h-5 w-5 text-gray-500 transform transition-transform" :class="{ 'rotate-180': isDropdownOpen }" xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 12a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 12z" clip-rule="evenodd" />
+                            </svg>
+                            </span>
+                            <ul v-if="isDropdownOpen" class="bg-white border-t border-hcream text-[15px]">
+                            <li><router-link to="/soluciones/creditos-escolarizados" class="block px-6 py-2 hover:bg-hgreen/10">Créditos escolarizados</router-link></li>
+                            <li><router-link to="/soluciones/creditos-universitarios" class="block px-6 py-2 hover:bg-hgreen/10">Créditos universitarios</router-link></li>
+                            <li><router-link to="/soluciones/gastos-academicos" class="block px-6 py-2 hover:bg-hgreen/10">Gastos académicos</router-link></li>
+                            <li><router-link to="/soluciones/programas-de-intercambio" class="block px-6 py-2 hover:bg-hgreen/10">Programas de intercambio</router-link></li>
+                            </ul>
+                        </li>
+
+                        <!-- Contáctanos -->
+                        <li>
+                            <router-link to="/contactanos" class="block px-4 py-3 hover:bg-hgreen/20">Contáctanos</router-link>
+                        </li>
+
+                        <!-- Buscador -->
+                        <li class="px-4 py-3">
+                            <input
+                            type="text"
+                            v-model="searchQuery"
+                            placeholder="Buscar..."
+                            @keydown.enter="search"
+                            class="w-full px-3 py-2 border border-hcream focus:ring-0 text-black focus:outline-none focus:border-hgreen"
+                            />
+                        </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -200,11 +251,21 @@ export default defineComponent({
             isOpen: false,
             closeTimer: 0,
             searchQuery: "" as string,
-
+            isMenuOpen: false,
+            isDropdownOpen: false,
             showSearch: false as boolean,
         };
     },
     methods: {
+        //menú responsive
+        toggleMenu() {
+            this.isMenuOpen = !this.isMenuOpen;
+            // Si se cierra el menú, también cierra el dropdown
+            if (!this.isMenuOpen) {
+                this.isDropdownOpen = false;
+            }
+        },
+
         openDropdown() {
             clearTimeout(this.closeTimer); // Limpiar el temporizador si está activo
             this.isOpen = true;
