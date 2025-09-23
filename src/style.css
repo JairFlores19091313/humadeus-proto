@@ -2,132 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    src: local('Montserrat'),
-         url('./assets/Montserrat.woff2') format('woff2');
-    font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  src:  local('Montserrat'),
+        url('./assets/Montserrat.woff2') format('woff2');
+  font-display: swap;
 }
 
-/* @font-face {
-    font-family: 'Montserrat';
-    font-style: italic;
-    src: local('Montserrat Italic'),
-         url('./static/fonts/Montserrat-italic-webfont.woff2') format('woff2');
-    font-display: swap;
-} */
 @layer components {
-	.menu-opt {
-		padding-top: 8px;
+  .menu-opt {
+    padding-top: 8px;
 		padding-bottom: 8px;
 		padding-left: 12px;
 		padding-right: 12px;
-		color: #1F2937;
-	}
+    /* padding: 6px; */
+    color: #1F2937;
+  }
 
-	.menu-first {
-		padding: 12px 0px;
-	}
+  .menu-first {
+    padding: 12px 0px;
+  }
+  
+  .menu-mob {
+    padding: 8px 0px;
+    color: #1F2937;
+  }
 
-	.menu-mob {
-		padding: 8px 0px;
-		color: #1F2937;
-	}
-
-	.menu-mob:hover {
-		color: #881912;
-	}
+  .menu-mob:hover {
+    color: #881912;
+  }
 }
 
 :root {
-	font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+  font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  /* color: black; */
+}
+a:hover {
+  /* color: #881912; */
 }
 
 button {
-	cursor: pointer;
-	border-radius: 0;
+  cursor: pointer;
+  border-radius: 0; /* Bordes cuadrados */
 }
 
 body {
-	margin: 0;
-	display: flex;
-	font-family: 'Montserrat', Arial, sans-serif;
-	place-items: center;
-	justify-content: center;
-	min-width: 320px;
-	min-height: 100vh;
-	background-color: #fff;
-	color: #444343;
+  margin: 0;
+  display: flex;
+  font-family: 'Montserrat', Arial, sans-serif;
+  place-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #444343;
 }
+/* Clase para ocultar h1 en el home: Utilizada para ocultar texto visualmente pero mantenerlo accesible para lectores de pantalla */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 
-/* Clase para ocultar h1 en el home: Utilizada para ocultar texto
-visualmente pero mantenerlo accesible para lectores de pantalla */
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border-width: 0;
-}
 
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 button {
-	border-radius: 8px;
-	border: 1px solid transparent;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
-	font-family: inherit;
-	background-color: #1a1a1a;
-	cursor: pointer;
-	transition: border-color 0.25s;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
 }
 
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
-}
+
+
+
 
 .card {
-	padding: 2em;
+  padding: 2em;
 }
 
 #app {
-	max-width: 100%;
-	margin: 0px;
-	padding: 0px;
-	text-align: center;
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #FFFFFF;
-	}
+  :root {
+    color: #213547;
+    background-color: #FFFFFF;
+  }
+  a:hover {
+    /* color:#881912; */
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
 
-	button {
-		background-color: #f9f9f9;
-	}
+/* Estilos para la lista desplegable */
+ul ul {
+  /* display: none; */
+  /* transform: translateY(-10px); */
 }
 
 ul li:hover ul {
-	display: block;
+  display: block;
+  /* transform: translateY(-8px); */
 }
-

@@ -4,22 +4,19 @@ import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
 
 export default defineComponent({
-    name: 'App',
-    components: {
-        Navbar,
-        Footer,
-    }
+  name: 'App',
+  components: {
+    Navbar,
+    Footer,
+  },
 });
 </script>
 
 <template class="flex flex-col w-full bg-white">
     <div class="flex flex-col h-full no-scroll justify-center items-center w-full bg-white">
-        <Navbar  />
-        <!-- <Navbar  @update:search="searchQuery = $event"/> -->
+        <Navbar/>
         <main>
-            <div id="app-content">
-                <router-view />
-            </div>
+            <router-view />
         </main>
         <Footer/>
     </div>

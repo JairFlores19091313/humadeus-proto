@@ -45,7 +45,8 @@
                         </button>
                     </div>
                 </div>
-                <img src="/images/imagen mujer.webp" class=" lg:max-w-[600px] lg:max-h-[400px] lg:mt-0 h-auto">
+                <!-- <img src="/images/imagen-mujer.webp" class=" lg:max-w-[600px] lg:max-h-[400px] lg:mt-0 h-auto"> -->
+                <img src="/images/manos-equipo-humadeus.webp" class=" lg:max-w-[600px] lg:max-h-[400px] lg:mt-0 h-auto">
             </div>
         </div>
     </div>

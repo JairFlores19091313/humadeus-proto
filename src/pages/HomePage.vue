@@ -206,7 +206,7 @@
                         </div>
                         
                         <!-- Imagen (espacio en blanco) -->
-                        <img src="/images/imagen hombre lentes.png" class="lg:w-[40%] lg:px-0 px-8">
+                        <img src="/images/imagen hombre lentes.png" class="lg:w-[40%]">
                     </div>
                 </div>
             </div>
