@@ -28,6 +28,18 @@ const routes: RouteRecordRaw[] = [
             //requireAuth: false
         },
     },
+    { path: '/soluciones/creditos-escolarizados', component: () => import('./pages/SolucionesPages/SolEscolarizado.vue'), name: 'soluciones',
+        meta: {
+            title: "Créditos Escolarizados | Humadeus",
+            //requireAuth: false
+        },
+    },
+    { path: '/aviso-de-privacidad', component: () => import('./pages/AvisoPrivacidad.vue'), name: 'Aviso de Privacidad',
+        meta: {
+            title: "Aviso de Privacidad | Humadeus",
+            //requireAuth: false
+        },
+    },
     { path: '/contactanos', component: () => import('./pages/ContactoPage.vue'), name: 'Contactanos',
         meta: {
             title: "Contactanos | Humadeus",
@@ -40,6 +52,12 @@ const routes: RouteRecordRaw[] = [
     //         //requireAuth: false
     //     },
     // },
+    { path: '/catalogo', component: () => import('./pages/Catalogo.vue'), name: 'catalogo',
+        meta: {
+            title: "Busqueda | Humadeus",
+            //requireAuth: false
+        },
+    },
 ]
 
 const router = createRouter({

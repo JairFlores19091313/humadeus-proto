@@ -62,10 +62,7 @@
                     <router-link to="/" class="mb-2 text-[12px]">Télefonos</router-link>
                     <router-link to="/" class="mb-2 text-[12px]">Dirección</router-link>
                     <p class="mb-2 text-[12px]">&nbsp;</p>
-                    <p @click="descargarDocx"
-                        class="mb-2 text-[12px] cursor-pointer z-10">
-                        Política de privacidad
-                    </p>
+                    <router-link to="/aviso-de-privacidad" class="mb-2 text-[12px] z-10">Política de Privacidad</router-link>
                 </div>
                 <!-- <div class="text-left justify-start text-hcream flex flex-col">
                     <router-link to="/nosotros" class="mb-2">SOLICITA TU CRÉDITO</router-link>
